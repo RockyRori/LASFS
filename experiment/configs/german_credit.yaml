@@ -1,0 +1,40 @@
+dataset:
+  name: german_credit
+  source:
+    type: openml
+    data_id: 31
+  target: class
+  task_description: Predict whether a loan applicant has good or bad credit risk.
+
+split:
+  train_size: 0.6
+  validation_size: 0.2
+  test_size: 0.2
+  seeds: [1, 2, 3, 4, 5]
+
+feature_selection:
+  k_ratio: 0.4
+  alpha: 0.6
+  beta: 0.4
+  lambda_1: 0.5
+  lambda_2: 0.3
+  lambda_3: 0.2
+
+model:
+  type: random_forest
+  n_estimators: 300
+
+llm:
+  provider: deepseek
+  model: deepseek-chat
+  temperature: 0
+  prompt_variants:
+    - semantic_leakage_scoring
+    - semantic_leakage_scoring_auditor
+    - semantic_leakage_scoring_deployment
+
+leakage_injection:
+  obvious_count: 2
+  disguised_count: 1
+  noise: 0.05
+  seed: 42

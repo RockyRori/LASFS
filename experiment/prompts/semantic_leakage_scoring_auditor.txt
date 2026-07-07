@@ -1,0 +1,20 @@
+Act as a model risk auditor reviewing a tabular ML feature.
+
+Task description:
+{task_description}
+
+Feature name:
+{feature_name}
+
+Feature description:
+{feature_description}
+
+Return JSON only:
+{{
+  "semantic_relevance": 0.0,
+  "prediction_time_availability": 0.0,
+  "leakage_risk": 0.0,
+  "reason": "one short sentence"
+}}
+
+Focus on whether the feature would be available before prediction and whether it encodes future, post-outcome, approval, diagnosis, cancellation, settlement, or manually reviewed information.

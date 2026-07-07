@@ -1,0 +1,58 @@
+dataset:
+  name: cultivars
+  source:
+    type: url_zip_csv
+    url: https://archive.ics.uci.edu/static/public/913/forty%2Bsoybean%2Bcultivars%2Bfrom%2Bsubsequent%2Bharvests.zip
+    csv_file: data.csv
+  target: yield_class
+  target_transform:
+    type: median_binary
+    source_column: GY
+    output_column: yield_class
+    labels: [low, high]
+    drop_source: true
+  task_description: Predict whether the soybean cultivar grain yield is high or low.
+  feature_descriptions:
+    Season: Harvest season indicator.
+    Cultivar: Soybean cultivar name.
+    Repetition: Experimental repetition number.
+    PH: Plant height.
+    IFP: First pod insertion height.
+    NLP: Number of legumes per plant.
+    NGP: Number of grains per plant.
+    NGL: Number of grains per legume.
+    NS: Number of stems.
+    MHG: Mass of one hundred grains.
+
+split:
+  train_size: 0.6
+  validation_size: 0.2
+  test_size: 0.2
+  seeds: [1, 2, 3, 4, 5]
+
+feature_selection:
+  k_ratio: 0.4
+  alpha: 0.6
+  beta: 0.4
+  lambda_1: 0.5
+  lambda_2: 0.3
+  lambda_3: 0.2
+
+model:
+  type: random_forest
+  n_estimators: 300
+
+llm:
+  provider: deepseek
+  model: deepseek-chat
+  temperature: 0
+  prompt_variants:
+    - semantic_leakage_scoring
+    - semantic_leakage_scoring_auditor
+    - semantic_leakage_scoring_deployment
+
+leakage_injection:
+  obvious_count: 2
+  disguised_count: 1
+  noise: 0.05
+  seed: 42

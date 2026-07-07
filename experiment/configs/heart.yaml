@@ -1,0 +1,52 @@
+dataset:
+  name: heart
+  source:
+    type: openml
+    data_id: 43672
+  target: target
+  task_description: Predict whether a patient has heart disease.
+  feature_descriptions:
+    age: Patient age.
+    sex: Patient sex.
+    chest_pain_type: Chest pain type.
+    resting_blood_pressure: Resting blood pressure.
+    cholesterol: Serum cholesterol.
+    fasting_blood_sugar: Whether fasting blood sugar exceeds 120 mg/dl.
+    resting_electrocardiogram: Resting electrocardiogram result.
+    max_heart_rate: Maximum heart rate achieved.
+    exercise_angina: Whether exercise induced angina is present.
+    oldpeak: ST depression induced by exercise relative to rest.
+    ST_slope: Slope of the peak exercise ST segment.
+
+split:
+  train_size: 0.6
+  validation_size: 0.2
+  test_size: 0.2
+  seeds: [1, 2, 3, 4, 5]
+
+feature_selection:
+  k_ratio: 0.4
+  alpha: 0.6
+  beta: 0.4
+  lambda_1: 0.5
+  lambda_2: 0.3
+  lambda_3: 0.2
+
+model:
+  type: random_forest
+  n_estimators: 300
+
+llm:
+  provider: deepseek
+  model: deepseek-chat
+  temperature: 0
+  prompt_variants:
+    - semantic_leakage_scoring
+    - semantic_leakage_scoring_auditor
+    - semantic_leakage_scoring_deployment
+
+leakage_injection:
+  obvious_count: 2
+  disguised_count: 1
+  noise: 0.05
+  seed: 42

@@ -1,0 +1,25 @@
+You are evaluating whether a tabular feature is safe to use before prediction time.
+
+Task description:
+{task_description}
+
+Feature name:
+{feature_name}
+
+Feature description:
+{feature_description}
+
+Evaluate this feature for leakage-aware feature selection.
+Return JSON only:
+{{
+  "semantic_relevance": 0.0,
+  "prediction_time_availability": 0.0,
+  "leakage_risk": 0.0,
+  "reason": "one short sentence"
+}}
+
+Scoring rules:
+- semantic_relevance: high if the feature is semantically relevant to the target.
+- prediction_time_availability: high if the feature is likely available before the prediction is made.
+- leakage_risk: high if the feature may contain target-derived information, future information, post-outcome information, or manual decision results.
+- If a feature sounds like an outcome, confirmation, final status, follow-up action, diagnosis result, approval result, cancellation reason, or settlement result, assign high leakage_risk.

@@ -1,0 +1,20 @@
+Act as an engineer deploying this model in production.
+
+Task description:
+{task_description}
+
+Feature name:
+{feature_name}
+
+Feature description:
+{feature_description}
+
+Return JSON only:
+{{
+  "semantic_relevance": 0.0,
+  "prediction_time_availability": 0.0,
+  "leakage_risk": 0.0,
+  "reason": "one short sentence"
+}}
+
+Focus on whether this feature can be collected at prediction time without using future events, final decisions, follow-up actions, or target-derived records.

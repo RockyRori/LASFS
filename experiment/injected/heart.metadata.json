@@ -1,0 +1,26 @@
+{
+  "dataset": "heart",
+  "target": "target",
+  "leakage_columns": [
+    "final_outcome_flag",
+    "post_decision_status",
+    "risk_review_code"
+  ],
+  "features": {
+    "final_outcome_flag": {
+      "is_injected_leakage": true,
+      "leakage_type": "obvious",
+      "description": "Injected post-outcome leakage feature derived from the target."
+    },
+    "post_decision_status": {
+      "is_injected_leakage": true,
+      "leakage_type": "obvious",
+      "description": "Injected post-outcome leakage feature derived from the target."
+    },
+    "risk_review_code": {
+      "is_injected_leakage": true,
+      "leakage_type": "disguised",
+      "description": "Injected operational code statistically derived from the target."
+    }
+  }
+}

@@ -1,0 +1,113 @@
+dataset,check,status,detail
+adult,main_results_exists,PASS,results\tables\adult_main_results.csv
+adult,selected_features_exists,PASS,results\selected_features\adult_selected_features.csv
+adult,semantic_scores_exists,PASS,results\tables\adult_semantic_scores.csv
+adult,main_required_columns,PASS,missing=[]
+adult,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+adult,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+adult,main_no_null_metrics,PASS,nulls={}
+adult,main_row_count,PASS,expected=20; actual=20
+adult,selected_required_columns,PASS,missing=[]
+adult,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+adult,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+adult,semantic_required_columns,PASS,missing=[]
+adult,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+adult,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+bank,main_results_exists,PASS,results\tables\bank_main_results.csv
+bank,selected_features_exists,PASS,results\selected_features\bank_selected_features.csv
+bank,semantic_scores_exists,PASS,results\tables\bank_semantic_scores.csv
+bank,main_required_columns,PASS,missing=[]
+bank,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+bank,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+bank,main_no_null_metrics,PASS,nulls={}
+bank,main_row_count,PASS,expected=20; actual=20
+bank,selected_required_columns,PASS,missing=[]
+bank,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+bank,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+bank,semantic_required_columns,PASS,missing=[]
+bank,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+bank,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+blood,main_results_exists,PASS,results\tables\blood_main_results.csv
+blood,selected_features_exists,PASS,results\selected_features\blood_selected_features.csv
+blood,semantic_scores_exists,PASS,results\tables\blood_semantic_scores.csv
+blood,main_required_columns,PASS,missing=[]
+blood,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+blood,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+blood,main_no_null_metrics,PASS,nulls={}
+blood,main_row_count,PASS,expected=20; actual=20
+blood,selected_required_columns,PASS,missing=[]
+blood,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+blood,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+blood,semantic_required_columns,PASS,missing=[]
+blood,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+blood,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+cultivars,main_results_exists,PASS,results\tables\cultivars_main_results.csv
+cultivars,selected_features_exists,PASS,results\selected_features\cultivars_selected_features.csv
+cultivars,semantic_scores_exists,PASS,results\tables\cultivars_semantic_scores.csv
+cultivars,main_required_columns,PASS,missing=[]
+cultivars,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+cultivars,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+cultivars,main_no_null_metrics,PASS,nulls={}
+cultivars,main_row_count,PASS,expected=20; actual=20
+cultivars,selected_required_columns,PASS,missing=[]
+cultivars,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+cultivars,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+cultivars,semantic_required_columns,PASS,missing=[]
+cultivars,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+cultivars,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+diabetes,main_results_exists,PASS,results\tables\diabetes_main_results.csv
+diabetes,selected_features_exists,PASS,results\selected_features\diabetes_selected_features.csv
+diabetes,semantic_scores_exists,PASS,results\tables\diabetes_semantic_scores.csv
+diabetes,main_required_columns,PASS,missing=[]
+diabetes,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+diabetes,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+diabetes,main_no_null_metrics,PASS,nulls={}
+diabetes,main_row_count,PASS,expected=20; actual=20
+diabetes,selected_required_columns,PASS,missing=[]
+diabetes,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+diabetes,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+diabetes,semantic_required_columns,PASS,missing=[]
+diabetes,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+diabetes,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+german_credit,main_results_exists,PASS,results\tables\german_credit_main_results.csv
+german_credit,selected_features_exists,PASS,results\selected_features\german_credit_selected_features.csv
+german_credit,semantic_scores_exists,PASS,results\tables\german_credit_semantic_scores.csv
+german_credit,main_required_columns,PASS,missing=[]
+german_credit,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+german_credit,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+german_credit,main_no_null_metrics,PASS,nulls={}
+german_credit,main_row_count,PASS,expected=20; actual=20
+german_credit,selected_required_columns,PASS,missing=[]
+german_credit,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+german_credit,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+german_credit,semantic_required_columns,PASS,missing=[]
+german_credit,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+german_credit,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+heart,main_results_exists,PASS,results\tables\heart_main_results.csv
+heart,selected_features_exists,PASS,results\selected_features\heart_selected_features.csv
+heart,semantic_scores_exists,PASS,results\tables\heart_semantic_scores.csv
+heart,main_required_columns,PASS,missing=[]
+heart,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+heart,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+heart,main_no_null_metrics,PASS,nulls={}
+heart,main_row_count,PASS,expected=20; actual=20
+heart,selected_required_columns,PASS,missing=[]
+heart,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+heart,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+heart,semantic_required_columns,PASS,missing=[]
+heart,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+heart,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
+telco_churn,main_results_exists,PASS,results\tables\telco_churn_main_results.csv
+telco_churn,selected_features_exists,PASS,results\selected_features\telco_churn_selected_features.csv
+telco_churn,semantic_scores_exists,PASS,results\tables\telco_churn_semantic_scores.csv
+telco_churn,main_required_columns,PASS,missing=[]
+telco_churn,main_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+telco_churn,main_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+telco_churn,main_no_null_metrics,PASS,nulls={}
+telco_churn,main_row_count,PASS,expected=20; actual=20
+telco_churn,selected_required_columns,PASS,missing=[]
+telco_churn,selected_methods,PASS,"methods=['LASFS', 'TFS-LASSO', 'TFS-LogReg', 'TFS-RF']"
+telco_churn,selected_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+telco_churn,semantic_required_columns,PASS,missing=[]
+telco_churn,semantic_seed_count,PASS,"seeds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+telco_churn,semantic_scores_in_unit_interval,PASS,"scores must be in [0, 1]"
