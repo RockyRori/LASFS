@@ -21,7 +21,7 @@ from lasfs.feature_selection import (
     select_tfs_lasso,
     select_tfs_logreg,
     select_tfs_rf,
-    top_k_from_ratio,
+    top_k_from_original_features,
     train_and_evaluate,
 )
 from lasfs.leakage_injection import mask_leakage_features
@@ -54,11 +54,13 @@ def llm_settings_for_role(
     temperature = role_config.get("temperature", llm_config.get("temperature", 0))
     return LLMSettings(
         provider=str(role_config.get("provider", llm_config.get("provider", "deepseek"))),
-        model=str(role_config.get("model", llm_config.get("model", "deepseek-chat"))),
+        model=str(role_config.get("model", llm_config.get("model", "deepseek-v4-flash"))),
         temperature=None if temperature is None else float(temperature),
         base_url=role_config.get("base_url"),
         api_key_env=role_config.get("api_key_env"),
         cache_dir=Path(output_dir) / "llm_cache",
+        max_workers=int(role_config.get("max_workers", llm_config.get("max_workers", 8))),
+        thinking_mode=role_config.get("thinking_mode", llm_config.get("thinking_mode")),
         mock=mock,
     )
 
@@ -111,7 +113,11 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
 
         feature_descriptions = dict(bundle.feature_descriptions)
 
-        k = top_k_from_ratio(bundle.X.shape[1], k_ratio=float(fs_cfg.get("k_ratio", 0.4)))
+        k = top_k_from_original_features(
+            bundle.X.shape[1],
+            len(bundle.leakage_columns),
+            k_ratio=float(fs_cfg.get("k_ratio", 0.4)),
+        )
         stat_scores = random_forest_feature_scores(
             X_train,
             y_train,
@@ -205,6 +211,9 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
                 "llm_model": method_models[selection.method].model
                 if selection.method in method_models
                 else "none",
+                "n_original_features": bundle.X.shape[1] - len(bundle.leakage_columns),
+                "n_injected_features": len(bundle.leakage_columns),
+                "k_basis": "original_features",
                 "k": k,
                 "leaky_auroc": leaky_metrics["auroc"],
                 "leaky_f1": leaky_metrics["f1"],
@@ -281,7 +290,11 @@ def run_ablation_config(
 
         feature_descriptions = dict(bundle.feature_descriptions)
 
-        k = top_k_from_ratio(bundle.X.shape[1], k_ratio=float(fs_cfg.get("k_ratio", 0.4)))
+        k = top_k_from_original_features(
+            bundle.X.shape[1],
+            len(bundle.leakage_columns),
+            k_ratio=float(fs_cfg.get("k_ratio", 0.4)),
+        )
         stat_scores = random_forest_feature_scores(
             X_train,
             y_train,
@@ -352,6 +365,9 @@ def run_ablation_config(
                 "method": selection.method,
                 "llm_provider": settings.provider.lower(),
                 "llm_model": settings.model,
+                "n_original_features": bundle.X.shape[1] - len(bundle.leakage_columns),
+                "n_injected_features": len(bundle.leakage_columns),
+                "k_basis": "original_features",
                 "k": k,
                 "leaky_auroc": leaky_metrics["auroc"],
                 "leaky_f1": leaky_metrics["f1"],

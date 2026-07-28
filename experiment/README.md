@@ -97,6 +97,11 @@ with 35% noise. It mixes explicit post-outcome names with disguised operational
 codes and records the configured and observed target agreement in each metadata
 JSON file.
 
+The top-\(k\) budget is computed from the number of original predictors before
+the ten synthetic leakage fields are added. Injecting more stress-test fields
+therefore cannot enlarge the selection budget or force a method to select
+leakage.
+
 Prepare one dataset:
 
 ```bash

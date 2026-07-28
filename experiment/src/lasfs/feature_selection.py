@@ -29,6 +29,21 @@ def top_k_from_ratio(n_features: int, k_ratio: float | None = None, k: int | Non
     return max(1, min(n_features, int(np.ceil(n_features * float(k_ratio)))))
 
 
+def top_k_from_original_features(
+    n_features: int,
+    n_injected_features: int,
+    k_ratio: float | None = None,
+    k: int | None = None,
+) -> int:
+    """Compute the selection budget before synthetic leakage fields are added."""
+    if n_injected_features < 0 or n_injected_features >= n_features:
+        raise ValueError(
+            "n_injected_features must be non-negative and smaller than n_features."
+        )
+    n_original_features = n_features - n_injected_features
+    return top_k_from_ratio(n_original_features, k_ratio=k_ratio, k=k)
+
+
 def normalize_scores(values: pd.Series) -> pd.Series:
     values = pd.to_numeric(values, errors="coerce").fillna(0.0)
     min_value = values.min()

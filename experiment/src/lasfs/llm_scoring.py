@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -38,11 +39,13 @@ RELEVANCE_ONLY_PROMPTS = {"semantic_relevance_only"}
 @dataclass(frozen=True)
 class LLMSettings:
     provider: str = "deepseek"
-    model: str = "deepseek-chat"
+    model: str = "deepseek-v4-flash"
     temperature: float | None = 0.0
     base_url: str | None = None
     api_key_env: str | None = None
     cache_dir: Path = Path("results/llm_cache")
+    max_workers: int = 8
+    thinking_mode: str | None = None
     mock: bool = False
 
     def __post_init__(self) -> None:
@@ -50,6 +53,10 @@ class LLMSettings:
         if provider not in PROVIDER_SPECS:
             supported = ", ".join(sorted(PROVIDER_SPECS))
             raise ValueError(f"Unsupported LLM provider '{self.provider}'. Choose one of: {supported}.")
+        if self.max_workers < 1:
+            raise ValueError("max_workers must be at least 1.")
+        if self.thinking_mode not in {None, "enabled", "disabled"}:
+            raise ValueError("thinking_mode must be 'enabled', 'disabled', or None.")
 
 
 @dataclass(frozen=True)
@@ -116,28 +123,40 @@ class LLMScorer:
         prompt_names: list[str],
         prompts_dir: str | Path = "prompts",
     ) -> pd.DataFrame:
-        rows: list[dict[str, Any]] = []
+        jobs: list[tuple[str, str, str]] = []
         for feature, description in feature_descriptions.items():
             for prompt_name in prompt_names:
-                score = self.score_feature(
-                    dataset_name=dataset_name,
-                    task_description=task_description,
-                    feature_name=feature,
-                    feature_description=description,
-                    prompt_name=prompt_name,
-                    prompt_path=Path(prompts_dir) / f"{prompt_name}.txt",
-                )
-                rows.append(
-                    {
-                        "dataset": dataset_name,
-                        "feature": feature,
-                        "prompt_variant": prompt_name,
-                        "semantic_relevance": score.semantic_relevance,
-                        "prediction_time_availability": score.prediction_time_availability,
-                        "leakage_risk": score.leakage_risk,
-                        "reason": score.reason,
-                    }
-                )
+                jobs.append((feature, description, prompt_name))
+
+        if not self.settings.mock:
+            _ = self.client
+
+        def score_job(job: tuple[str, str, str]) -> dict[str, Any]:
+            feature, description, prompt_name = job
+            score = self.score_feature(
+                dataset_name=dataset_name,
+                task_description=task_description,
+                feature_name=feature,
+                feature_description=description,
+                prompt_name=prompt_name,
+                prompt_path=Path(prompts_dir) / f"{prompt_name}.txt",
+            )
+            return {
+                "dataset": dataset_name,
+                "feature": feature,
+                "prompt_variant": prompt_name,
+                "semantic_relevance": score.semantic_relevance,
+                "prediction_time_availability": score.prediction_time_availability,
+                "leakage_risk": score.leakage_risk,
+                "reason": score.reason,
+            }
+
+        if self.settings.max_workers == 1 or len(jobs) <= 1:
+            rows = [score_job(job) for job in jobs]
+        else:
+            worker_count = min(self.settings.max_workers, len(jobs))
+            with ThreadPoolExecutor(max_workers=worker_count) as executor:
+                rows = list(executor.map(score_job, jobs))
         return pd.DataFrame(rows)
 
     def score_feature(
@@ -157,6 +176,8 @@ class LLMScorer:
             "prompt_name": prompt_name,
             "provider": self.settings.provider.lower(),
             "model": self.settings.model,
+            "temperature": self.settings.temperature,
+            "thinking_mode": self.settings.thinking_mode,
         }
         cache_path = self.settings.cache_dir / f"{stable_hash(payload)}.json"
         if cache_path.exists():
@@ -199,11 +220,18 @@ class LLMScorer:
         }
         if self.settings.temperature is not None:
             request["temperature"] = self.settings.temperature
-        completion = self.client.chat.completions.create(**request)
-        content = completion.choices[0].message.content
-        if content is None:
-            raise RuntimeError("LLM returned empty content.")
-        return json.loads(content)
+        if self.settings.provider.lower() == "deepseek" and self.settings.thinking_mode:
+            request["extra_body"] = {"thinking": {"type": self.settings.thinking_mode}}
+
+        last_error: Exception | None = None
+        for _ in range(3):
+            completion = self.client.chat.completions.create(**request)
+            content = (completion.choices[0].message.content or "").strip()
+            try:
+                return json.loads(content)
+            except json.JSONDecodeError as exc:
+                last_error = exc
+        raise RuntimeError("LLM failed to return valid JSON after 3 attempts.") from last_error
 
     def _legacy_deepseek_cache_path(self, payload: dict[str, Any]) -> Path | None:
         if self.settings.provider.lower() != "deepseek":

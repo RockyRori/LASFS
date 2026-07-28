@@ -4,6 +4,25 @@ LASFS is a leakage-aware feature selection framework for tabular prediction.
 It combines statistical feature importance with LLM-based semantic assessment
 of leakage risk, prediction-time availability, and scoring uncertainty.
 
+## Workflow
+
+![LASFS experimental workflow](paper_artifacts/figures/LASFS_workflow.png)
+
+Raw datasets are first converted into fixed processed CSV snapshots and then
+augmented with the same ten graded leakage features for every selector. For each
+of five random seeds, the injected snapshot is split into training, validation,
+and test partitions. Preprocessing and Random Forest feature importance are
+fitted on training data only.
+
+LASFS keeps statistical and semantic evidence separate before ranking. It
+combines training-only Random Forest importance with metadata-only LLM estimates
+of relevance, prediction-time availability, leakage risk, and uncertainty, then
+selects the top-k features using utility rewards and risk penalties. The
+traditional selectors and relevance-only `LLM-only` baseline use the same data
+snapshots and splits. Every selected subset is evaluated with a newly fitted
+Random Forest under both a leaky test setting, where injected fields remain
+available, and a clean deployment setting, where those fields are unavailable.
+
 The current benchmark compares:
 
 - `TFS-RF`: Random Forest feature-importance selection.
@@ -75,9 +94,8 @@ default.
 
 ## LLM Providers
 
-Semantic scoring supports DeepSeek, OpenAI GPT models (ChatGPT family), and
-Tongyi Qwen through the OpenAI Python client. Dataset YAML files inherit
-`experiment/configs/common/llm.yaml`, which contains the active `llm_only` and
+Semantic scoring supports DeepSeek, OpenAI GPT models, and
+Tongyi Qwen through the OpenAI Python client. Dataset YAML files contains the active `llm_only` and
 `lasfs` settings plus commented examples for all three providers. The resolved
 provider/model is written into experiment result CSVs. Keep the two role
 configurations identical for the controlled method comparison; use different
@@ -130,7 +148,7 @@ semantic scores by provider, model, dataset, feature, and prompt under
 The latest run uses the ten-field graded leakage profile, five seeds per
 dataset, eight datasets, and five main methods (`TFS-RF`, `TFS-LogReg`,
 `TFS-LASSO`, `LLM-only`, `LASFS`). Both LLM-only and LASFS used DeepSeek
-`deepseek-chat`, with role-specific prompts and scoring rules. All result
+`deepseek-v4-flash`, with role-specific prompts and scoring rules. All result
 integrity checks passed after regenerating `experiment/results` and
 `paper_artifacts`.
 
@@ -152,21 +170,24 @@ Summary from the latest generated tables:
 ![](paper_artifacts/figures/fig_leaky_vs_clean_auroc.png)
 
 | Dataset       | LLM-only Clean AUROC | LASFS Clean AUROC | LLM-only Clean F1 | LASFS Clean F1 | LLM-only Leaks | LASFS Leaks |
-|---------------|----------------------:|------------------:|------------------:|---------------:|---------------:|------------:|
-| adult         |                 0.888 |             0.883 |             0.660 |          0.646 |            0.0 |         0.0 |
-| bank          |                 0.877 |             0.722 |             0.416 |          0.241 |            0.0 |         0.0 |
-| blood         |                 0.677 |             0.679 |             0.236 |          0.304 |            2.0 |         2.0 |
-| cultivars     |                 0.784 |             0.769 |             0.680 |          0.680 |            0.0 |         0.0 |
-| diabetes      |                 0.833 |             0.829 |             0.660 |          0.636 |            1.0 |         0.0 |
-| german_credit |                 0.764 |             0.754 |             0.835 |          0.839 |            1.0 |         0.0 |
-| heart         |                 0.934 |             0.949 |             0.879 |          0.903 |            1.0 |         0.0 |
-| telco_churn   |                 0.831 |             0.805 |             0.577 |          0.535 |            3.0 |         0.0 |
+|---------------|---------------------:|------------------:|------------------:|---------------:|---------------:|------------:|
+| adult         |                0.902 |             0.849 |             0.671 |          0.599 |            0.0 |         0.0 |
+| bank          |                0.833 |             0.628 |             0.410 |          0.233 |            0.0 |         0.0 |
+| blood         |                0.638 |             0.638 |             0.356 |          0.356 |            0.0 |         0.0 |
+| cultivars     |                0.680 |             0.750 |             0.631 |          0.674 |            0.0 |         0.0 |
+| diabetes      |                0.794 |             0.810 |             0.601 |          0.641 |            1.0 |         0.0 |
+| german_credit |                0.732 |             0.742 |             0.819 |          0.818 |            1.0 |         0.0 |
+| heart         |                0.899 |             0.887 |             0.831 |          0.825 |            1.0 |         0.0 |
+| telco_churn   |                0.804 |             0.801 |             0.535 |          0.521 |            0.0 |         0.0 |
 
 Across datasets, relevance-only LLM-only reaches macro-average clean AUROC/F1
-of 0.824/0.618 and selects 1.00 injected leakage field on average. LASFS
-reaches 0.799/0.598 and selects 0.25 leakage fields on average. Their mean
-deployment drops are 0.082 and 0.040, respectively. The three traditional
-baselines select 6.45-7.63 of the ten injected fields on average.
+of 0.785/0.607 and selects 0.375 injected leakage fields on average. LASFS
+reaches 0.763/0.583 while selecting no injected field on any dataset. Their
+mean deployment drops are 0.041 and 0.000, respectively. Thus, relative to the
+relevance-only selector, LASFS trades 0.022 macro clean AUROC and 0.023 macro
+clean F1 for complete rejection of the controlled leakage fields. The three
+traditional baselines select 4.75--5.30 of the ten injected fields on average
+and incur mean deployment drops of 0.414--0.461.
 
 The comparison uses the same DeepSeek model for both LLM-based methods and
 represents the complete leakage-aware LASFS procedure relative to a naive

@@ -4,15 +4,19 @@
 # both LLM-only and LASFS use DeepSeek, with role-specific prompts.
 # Set DEEPSEEK_API_KEY in experiment/.env.
 llm:
+  # Parallel first-time requests; every response is cached locally before reuse.
+  max_workers: 8
+  # Feature scoring uses short structured outputs; disable V4's default reasoning.
+  thinking_mode: disabled
   llm_only:
     provider: deepseek
-    model: deepseek-chat
+    model: deepseek-v4-flash
     temperature: 0
     prompt_variants:
       - semantic_relevance_only
   lasfs:
     provider: deepseek
-    model: deepseek-chat
+    model: deepseek-v4-flash
     temperature: 0
     prompt_variants:
       - semantic_leakage_scoring
@@ -23,7 +27,7 @@ llm:
 # above so that both roles use:
 #
 #   provider: deepseek
-#   model: deepseek-chat
+#   model: deepseek-v4-flash
 #
 # Keep each role's active prompt_variants unchanged.
 # Required env: DEEPSEEK_API_KEY

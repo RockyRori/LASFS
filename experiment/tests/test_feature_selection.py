@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import pandas as pd
+import pytest
 
 from lasfs.feature_selection import (
     logistic_regression_feature_scores,
@@ -9,6 +10,7 @@ from lasfs.feature_selection import (
     select_llm_only,
     select_tfs_lasso,
     select_tfs_logreg,
+    top_k_from_original_features,
     top_k_from_ratio,
 )
 
@@ -17,6 +19,17 @@ def test_top_k_from_ratio_bounds() -> None:
     assert top_k_from_ratio(10, k_ratio=0.4) == 4
     assert top_k_from_ratio(10, k=99) == 10
     assert top_k_from_ratio(10, k=0) == 1
+
+
+def test_top_k_from_original_features_excludes_injected_fields_from_budget() -> None:
+    assert top_k_from_original_features(24, 10, k_ratio=0.4) == 6
+    assert top_k_from_original_features(14, 10, k_ratio=0.4) == 2
+    assert top_k_from_original_features(14, 10, k=99) == 4
+
+
+def test_top_k_from_original_features_rejects_invalid_counts() -> None:
+    with pytest.raises(ValueError):
+        top_k_from_original_features(10, 10, k_ratio=0.4)
 
 
 def test_normalize_scores_constant_returns_midpoint() -> None:
