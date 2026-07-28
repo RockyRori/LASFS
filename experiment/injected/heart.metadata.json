@@ -4,23 +4,115 @@
   "leakage_columns": [
     "final_outcome_flag",
     "post_decision_status",
-    "risk_review_code"
+    "risk_review_code",
+    "confirmed_result_code",
+    "case_resolution_type",
+    "followup_action_group",
+    "outcome_verification_score",
+    "workflow_bucket_id",
+    "service_path_code",
+    "review_priority_index"
   ],
   "features": {
     "final_outcome_flag": {
       "is_injected_leakage": true,
       "leakage_type": "obvious",
-      "description": "Injected post-outcome leakage feature derived from the target."
+      "leakage_level": "strong",
+      "noise_rate": 0.02,
+      "expected_target_agreement": 0.98,
+      "observed_target_agreement": 0.980672268907563,
+      "representation": "binary",
+      "description": "Final outcome flag recorded after the target event is known."
     },
     "post_decision_status": {
       "is_injected_leakage": true,
       "leakage_type": "obvious",
-      "description": "Injected post-outcome leakage feature derived from the target."
+      "leakage_level": "strong",
+      "noise_rate": 0.02,
+      "expected_target_agreement": 0.98,
+      "observed_target_agreement": 0.9882352941176471,
+      "representation": "categorical",
+      "description": "Decision status populated only after the prediction outcome is finalized."
     },
     "risk_review_code": {
       "is_injected_leakage": true,
       "leakage_type": "disguised",
-      "description": "Injected operational code statistically derived from the target."
+      "leakage_level": "strong",
+      "noise_rate": 0.02,
+      "expected_target_agreement": 0.98,
+      "observed_target_agreement": 0.9781512605042016,
+      "representation": "categorical",
+      "description": "Operational review code assigned after adjudication is complete."
+    },
+    "confirmed_result_code": {
+      "is_injected_leakage": true,
+      "leakage_type": "obvious",
+      "leakage_level": "moderate",
+      "noise_rate": 0.15,
+      "expected_target_agreement": 0.85,
+      "observed_target_agreement": 0.8521008403361344,
+      "representation": "categorical",
+      "description": "Confirmed result category derived from a partially verified final outcome."
+    },
+    "case_resolution_type": {
+      "is_injected_leakage": true,
+      "leakage_type": "disguised",
+      "leakage_level": "moderate",
+      "noise_rate": 0.15,
+      "expected_target_agreement": 0.85,
+      "observed_target_agreement": 0.8521008403361344,
+      "representation": "categorical",
+      "description": "Resolution workflow label assigned near case closure."
+    },
+    "followup_action_group": {
+      "is_injected_leakage": true,
+      "leakage_type": "disguised",
+      "leakage_level": "moderate",
+      "noise_rate": 0.15,
+      "expected_target_agreement": 0.85,
+      "observed_target_agreement": 0.8495798319327731,
+      "representation": "categorical",
+      "description": "Follow-up action group generated from downstream case handling."
+    },
+    "outcome_verification_score": {
+      "is_injected_leakage": true,
+      "leakage_type": "obvious",
+      "leakage_level": "moderate",
+      "noise_rate": 0.15,
+      "expected_target_agreement": 0.85,
+      "observed_target_agreement": 0.8630252100840337,
+      "representation": "continuous",
+      "description": "Verification score computed using evidence collected after the outcome."
+    },
+    "workflow_bucket_id": {
+      "is_injected_leakage": true,
+      "leakage_type": "disguised",
+      "leakage_level": "weak",
+      "noise_rate": 0.35,
+      "expected_target_agreement": 0.65,
+      "observed_target_agreement": 0.6470588235294118,
+      "representation": "categorical",
+      "description": "Internal workflow bucket associated with late-stage case processing."
+    },
+    "service_path_code": {
+      "is_injected_leakage": true,
+      "leakage_type": "disguised",
+      "leakage_level": "weak",
+      "noise_rate": 0.35,
+      "expected_target_agreement": 0.65,
+      "observed_target_agreement": 0.6411764705882353,
+      "representation": "categorical",
+      "description": "Service path code produced during operational case routing."
+    },
+    "review_priority_index": {
+      "is_injected_leakage": true,
+      "leakage_type": "disguised",
+      "leakage_level": "weak",
+      "noise_rate": 0.35,
+      "expected_target_agreement": 0.65,
+      "observed_target_agreement": 0.6420168067226891,
+      "representation": "continuous",
+      "description": "Review priority index updated throughout the case lifecycle."
     }
   }
 }

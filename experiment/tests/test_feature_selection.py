@@ -6,6 +6,7 @@ from lasfs.feature_selection import (
     logistic_regression_feature_scores,
     normalize_scores,
     select_lasfs,
+    select_llm_only,
     select_tfs_lasso,
     select_tfs_logreg,
     top_k_from_ratio,
@@ -57,6 +58,26 @@ def test_select_lasfs_accepts_custom_method_name() -> None:
     )
     result = select_lasfs(stat, semantic, k=1, method="LASFS-full")
     assert result.method == "LASFS-full"
+
+
+def test_select_llm_only_uses_only_semantic_relevance() -> None:
+    semantic = pd.DataFrame(
+        {
+            "feature": ["safe_feature", "leaky_feature"],
+            "avg_semantic_relevance": [0.7, 1.0],
+            "avg_availability": [0.9, 0.1],
+            "avg_leakage_risk": [0.1, 1.0],
+            "uncertainty": [0.0, 0.0],
+        }
+    )
+
+    result = select_llm_only(semantic, k=1)
+
+    assert result.method == "LLM-only"
+    assert result.selected_features == ["leaky_feature"]
+    assert "stat_score" not in result.scores
+    assert "llm_score" in result.scores
+    assert result.scores.set_index("feature").loc["leaky_feature", "llm_score"] == 1.0
 
 
 def test_logistic_regression_baselines_return_ranked_features() -> None:

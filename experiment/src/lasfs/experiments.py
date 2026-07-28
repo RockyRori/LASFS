@@ -17,6 +17,7 @@ from lasfs.feature_selection import (
     logistic_regression_feature_scores,
     random_forest_feature_scores,
     select_lasfs,
+    select_llm_only,
     select_tfs_lasso,
     select_tfs_logreg,
     select_tfs_rf,
@@ -43,6 +44,34 @@ LASFS_ABLATIONS: dict[str, dict[str, float]] = {
 }
 
 
+def llm_settings_for_role(
+    llm_config: dict[str, Any],
+    role: str,
+    output_dir: str | Path,
+    mock: bool,
+) -> LLMSettings:
+    role_config = llm_config.get(role, llm_config)
+    temperature = role_config.get("temperature", llm_config.get("temperature", 0))
+    return LLMSettings(
+        provider=str(role_config.get("provider", llm_config.get("provider", "deepseek"))),
+        model=str(role_config.get("model", llm_config.get("model", "deepseek-chat"))),
+        temperature=None if temperature is None else float(temperature),
+        base_url=role_config.get("base_url"),
+        api_key_env=role_config.get("api_key_env"),
+        cache_dir=Path(output_dir) / "llm_cache",
+        mock=mock,
+    )
+
+
+def prompt_names_for_role(llm_config: dict[str, Any], role: str) -> list[str]:
+    role_config = llm_config.get(role, {})
+    prompt_names = role_config.get(
+        "prompt_variants",
+        llm_config.get("prompt_variants", ["semantic_leakage_scoring"]),
+    )
+    return [str(name) for name in prompt_names]
+
+
 def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str | Path = "results") -> ExperimentOutputs:
     bundle = load_dataset(config)
     split_cfg = config["split"]
@@ -51,13 +80,11 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
     model_cfg = config.get("model", {})
     seeds = split_cfg.get("seeds", [42])
 
-    settings = LLMSettings(
-        model=llm_cfg.get("model", "deepseek-chat"),
-        temperature=float(llm_cfg.get("temperature", 0)),
-        cache_dir=Path(output_dir) / "llm_cache",
-        mock=mock_llm,
-    )
-    scorer = LLMScorer(settings)
+    llm_settings = {
+        role: llm_settings_for_role(llm_cfg, role, output_dir, mock_llm)
+        for role in ("llm_only", "lasfs")
+    }
+    scorers = {role: LLMScorer(settings) for role, settings in llm_settings.items()}
 
     all_metrics: list[dict[str, Any]] = []
     all_selected: list[dict[str, Any]] = []
@@ -103,23 +130,33 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
             penalty="l1",
             random_state=int(seed),
         )
-        semantic_raw = scorer.score_features(
-            dataset_name=bundle.name,
-            task_description=bundle.task_description,
-            feature_descriptions=feature_descriptions,
-            prompt_names=llm_cfg.get("prompt_variants", ["semantic_leakage_scoring"]),
-        )
-        semantic_raw["seed"] = seed
-        all_semantic.append(semantic_raw)
-        semantic_scores = aggregate_semantic_scores(semantic_raw)
+        semantic_scores_by_role: dict[str, pd.DataFrame] = {}
+        for role, scorer in scorers.items():
+            semantic_raw = scorer.score_features(
+                dataset_name=bundle.name,
+                task_description=bundle.task_description,
+                feature_descriptions=feature_descriptions,
+                prompt_names=prompt_names_for_role(llm_cfg, role),
+            )
+            settings = llm_settings[role]
+            semantic_raw["seed"] = seed
+            semantic_raw["scoring_role"] = role
+            semantic_raw["provider"] = settings.provider.lower()
+            semantic_raw["model"] = settings.model
+            all_semantic.append(semantic_raw)
+            semantic_scores_by_role[role] = aggregate_semantic_scores(semantic_raw)
 
         selections = [
             select_tfs_rf(stat_scores, k),
             select_tfs_logreg(logreg_scores, k),
             select_tfs_lasso(lasso_scores, k),
+            select_llm_only(
+                semantic_scores_by_role["llm_only"],
+                k,
+            ),
             select_lasfs(
                 stat_scores,
-                semantic_scores,
+                semantic_scores_by_role["lasfs"],
                 k,
                 alpha=float(fs_cfg.get("alpha", 0.6)),
                 beta=float(fs_cfg.get("beta", 0.4)),
@@ -130,6 +167,10 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
         ]
 
         X_clean_test = mask_leakage_features(X_test, bundle.leakage_columns, train_reference=X_train)
+        method_models = {
+            "LLM-only": llm_settings["llm_only"],
+            "LASFS": llm_settings["lasfs"],
+        }
         for selection in selections:
             leaky_metrics = train_and_evaluate(
                 X_train,
@@ -158,6 +199,12 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
                 "dataset": bundle.name,
                 "seed": seed,
                 "method": selection.method,
+                "llm_provider": method_models[selection.method].provider.lower()
+                if selection.method in method_models
+                else "none",
+                "llm_model": method_models[selection.method].model
+                if selection.method in method_models
+                else "none",
                 "k": k,
                 "leaky_auroc": leaky_metrics["auroc"],
                 "leaky_f1": leaky_metrics["f1"],
@@ -173,6 +220,12 @@ def run_config(config: dict[str, Any], mock_llm: bool = False, output_dir: str |
                         "dataset": bundle.name,
                         "seed": seed,
                         "method": selection.method,
+                        "llm_provider": method_models[selection.method].provider.lower()
+                        if selection.method in method_models
+                        else "none",
+                        "llm_model": method_models[selection.method].model
+                        if selection.method in method_models
+                        else "none",
                         "rank": rank,
                         "feature": feature,
                         "is_injected_leakage": feature in bundle.leakage_columns,
@@ -200,12 +253,7 @@ def run_ablation_config(
     model_cfg = config.get("model", {})
     seeds = split_cfg.get("seeds", [42])
 
-    settings = LLMSettings(
-        model=llm_cfg.get("model", "deepseek-chat"),
-        temperature=float(llm_cfg.get("temperature", 0)),
-        cache_dir=Path(output_dir) / "llm_cache",
-        mock=mock_llm,
-    )
+    settings = llm_settings_for_role(llm_cfg, "lasfs", output_dir, mock_llm)
     scorer = LLMScorer(settings)
 
     all_metrics: list[dict[str, Any]] = []
@@ -244,9 +292,12 @@ def run_ablation_config(
             dataset_name=bundle.name,
             task_description=bundle.task_description,
             feature_descriptions=feature_descriptions,
-            prompt_names=llm_cfg.get("prompt_variants", ["semantic_leakage_scoring"]),
+            prompt_names=prompt_names_for_role(llm_cfg, "lasfs"),
         )
         semantic_raw["seed"] = seed
+        semantic_raw["scoring_role"] = "lasfs"
+        semantic_raw["provider"] = settings.provider.lower()
+        semantic_raw["model"] = settings.model
         all_semantic.append(semantic_raw)
         semantic_scores = aggregate_semantic_scores(semantic_raw)
 
@@ -299,6 +350,8 @@ def run_ablation_config(
                 "dataset": bundle.name,
                 "seed": seed,
                 "method": selection.method,
+                "llm_provider": settings.provider.lower(),
+                "llm_model": settings.model,
                 "k": k,
                 "leaky_auroc": leaky_metrics["auroc"],
                 "leaky_f1": leaky_metrics["f1"],
@@ -314,6 +367,8 @@ def run_ablation_config(
                         "dataset": bundle.name,
                         "seed": seed,
                         "method": selection.method,
+                        "llm_provider": settings.provider.lower(),
+                        "llm_model": settings.model,
                         "rank": rank,
                         "feature": feature,
                         "is_injected_leakage": feature in bundle.leakage_columns,

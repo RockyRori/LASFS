@@ -1,0 +1,49 @@
+# Shared LLM configuration for every dataset.
+#
+# The active configuration is a controlled same-model comparison:
+# both LLM-only and LASFS use DeepSeek, with role-specific prompts.
+# Set DEEPSEEK_API_KEY in experiment/.env.
+llm:
+  llm_only:
+    provider: deepseek
+    model: deepseek-chat
+    temperature: 0
+    prompt_variants:
+      - semantic_relevance_only
+  lasfs:
+    provider: deepseek
+    model: deepseek-chat
+    temperature: 0
+    prompt_variants:
+      - semantic_leakage_scoring
+      - semantic_leakage_scoring_auditor
+      - semantic_leakage_scoring_deployment
+
+# For a controlled DeepSeek comparison, change only the provider/model values
+# above so that both roles use:
+#
+#   provider: deepseek
+#   model: deepseek-chat
+#
+# Keep each role's active prompt_variants unchanged.
+# Required env: DEEPSEEK_API_KEY
+
+# To use OpenAI for both methods, change each role's provider/model/temperature:
+#
+#   provider: openai
+#   model: gpt-5.6-luna
+#   temperature: null  # Omit unsupported sampling temperature for GPT-5.6.
+#
+# Keep each role's active prompt_variants unchanged.
+# Required env: OPENAI_API_KEY
+
+# To use Tongyi Qwen for both methods, change each role's provider/model:
+#
+#   provider: qwen
+#   model: qwen-plus
+#   temperature: 0
+#
+# Keep each role's active prompt_variants unchanged.
+# Required env: DASHSCOPE_API_KEY
+# Default OpenAI-compatible endpoint:
+# DASHSCOPE_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1

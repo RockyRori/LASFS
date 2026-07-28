@@ -110,6 +110,18 @@ def select_tfs_lasso(stat_scores: pd.DataFrame, k: int) -> SelectionResult:
     return SelectionResult("TFS-LASSO", ranked.head(k)["feature"].tolist(), ranked)
 
 
+def select_llm_only(
+    semantic_scores: pd.DataFrame,
+    k: int,
+) -> SelectionResult:
+    """Rank features using only LLM-derived semantic relevance."""
+    ranked = semantic_scores.copy()
+    ranked["avg_semantic_relevance"] = clip_unit_interval(ranked["avg_semantic_relevance"])
+    ranked["llm_score"] = ranked["avg_semantic_relevance"]
+    ranked = ranked.sort_values(["llm_score", "feature"], ascending=[False, True])
+    return SelectionResult("LLM-only", ranked.head(k)["feature"].tolist(), ranked)
+
+
 def select_lasfs(
     stat_scores: pd.DataFrame,
     semantic_scores: pd.DataFrame,

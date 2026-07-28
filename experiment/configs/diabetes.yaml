@@ -1,3 +1,5 @@
+extends: common/llm.yaml
+
 dataset:
   name: diabetes
   source:
@@ -33,17 +35,14 @@ model:
   type: random_forest
   n_estimators: 300
 
-llm:
-  provider: deepseek
-  model: deepseek-chat
-  temperature: 0
-  prompt_variants:
-    - semantic_leakage_scoring
-    - semantic_leakage_scoring_auditor
-    - semantic_leakage_scoring_deployment
-
 leakage_injection:
-  obvious_count: 2
-  disguised_count: 1
-  noise: 0.05
+  feature_count: 10
+  level_counts:
+    strong: 3
+    moderate: 4
+    weak: 3
+  noise_by_level:
+    strong: 0.02
+    moderate: 0.15
+    weak: 0.35
   seed: 42

@@ -4,6 +4,7 @@ import pandas as pd
 import pytest
 
 from lasfs.data import load_dataset, prepare_dataset
+from lasfs.leakage_injection import LEAKAGE_FEATURE_SPECS
 
 
 def _synthetic_config() -> dict:
@@ -20,9 +21,9 @@ def _synthetic_config() -> dict:
             "task_description": "Predict a tiny synthetic target.",
         },
         "leakage_injection": {
-            "obvious_count": 2,
-            "disguised_count": 1,
-            "noise": 0.0,
+            "feature_count": 10,
+            "level_counts": {"strong": 3, "moderate": 4, "weak": 3},
+            "noise_by_level": {"strong": 0.02, "moderate": 0.15, "weak": 0.35},
             "seed": 7,
         },
     }
@@ -43,11 +44,12 @@ def test_prepare_dataset_materializes_fixed_stages(tmp_path) -> None:
     processed = pd.read_csv(paths.processed)
     injected = pd.read_csv(paths.injected)
     added_columns = set(injected.columns) - set(processed.columns)
-    assert added_columns == {"final_outcome_flag", "post_decision_status", "risk_review_code"}
+    expected_leakage = [spec.name for spec in LEAKAGE_FEATURE_SPECS]
+    assert added_columns == set(expected_leakage)
 
     bundle = load_dataset(config, base_dir=tmp_path)
     assert bundle.X.shape[0] == 40
-    assert bundle.leakage_columns == ["final_outcome_flag", "post_decision_status", "risk_review_code"]
+    assert bundle.leakage_columns == expected_leakage
     assert "target" not in bundle.X.columns
 
 
@@ -79,9 +81,9 @@ def test_prepare_dataset_can_binarize_continuous_target(tmp_path) -> None:
             "task_description": "Predict a binarized target.",
         },
         "leakage_injection": {
-            "obvious_count": 2,
-            "disguised_count": 1,
-            "noise": 0.0,
+            "feature_count": 10,
+            "level_counts": {"strong": 3, "moderate": 4, "weak": 3},
+            "noise_by_level": {"strong": 0.02, "moderate": 0.15, "weak": 0.35},
             "seed": 7,
         },
     }

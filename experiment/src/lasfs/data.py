@@ -11,7 +11,12 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import fetch_openml, make_classification
 
-from lasfs.leakage_injection import DISGUISED_NAMES, OBVIOUS_NAMES, inject_leakage_features
+from lasfs.leakage_injection import (
+    DEFAULT_LEVEL_COUNTS,
+    DISGUISED_NAMES,
+    OBVIOUS_NAMES,
+    inject_leakage_features,
+)
 from lasfs.utils import PROJECT_ROOT, ensure_dir
 
 
@@ -108,16 +113,17 @@ def prepare_dataset(
     X = _coerce_object_columns(processed_df.drop(columns=[target]).copy())
     y = processed_df[target].copy()
     leakage_cfg = config.get("leakage_injection", {})
-    obvious_count = int(leakage_cfg.get("obvious_count", 2))
-    disguised_count = int(leakage_cfg.get("disguised_count", 1))
-    if obvious_count + disguised_count != 3:
-        raise ValueError("The fixed preprocessing flow requires exactly 3 injected leakage features.")
+    feature_count = int(leakage_cfg.get("feature_count", 10))
+    if feature_count != 10:
+        raise ValueError("The fixed preprocessing flow requires exactly 10 injected leakage features.")
+    level_counts = leakage_cfg.get("level_counts", DEFAULT_LEVEL_COUNTS)
+    if level_counts != DEFAULT_LEVEL_COUNTS:
+        raise ValueError(f"The fixed leakage profile requires level_counts={DEFAULT_LEVEL_COUNTS}.")
     injected = inject_leakage_features(
         X,
         y,
-        obvious_count=obvious_count,
-        disguised_count=disguised_count,
-        noise=float(leakage_cfg.get("noise", 0.05)),
+        feature_count=feature_count,
+        noise_by_level=leakage_cfg.get("noise_by_level"),
         seed=int(leakage_cfg.get("seed", 42)),
     )
     injected_df = injected.X.copy()

@@ -15,7 +15,8 @@ Default behavior:
 - reads `results/selected_features/*_selected_features.csv`;
 - excludes the synthetic debugging dataset;
 - writes paper CSV files to `results/paper_tables/`;
-- writes PNG figures and table images to `results/figures/`.
+- writes PNG figures and table images to `results/figures/`;
+- writes matching vector PDF figures and table images to `results/pdfs/`.
 
 Include the synthetic dataset:
 
@@ -60,7 +61,7 @@ The ablation runner evaluates:
 python scripts/check_results.py --results-dir results
 ```
 
-The checker verifies that the expected paper datasets exist, all four main methods
+The checker verifies that the expected paper datasets exist, all five main methods
 are present, each dataset has five seeds, required columns are available, and
 semantic scores stay in `[0, 1]`. It writes:
 

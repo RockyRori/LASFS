@@ -16,11 +16,13 @@ EXPECTED_DATASETS = [
     "heart",
     "telco_churn",
 ]
-EXPECTED_METHODS = ["TFS-RF", "TFS-LogReg", "TFS-LASSO", "LASFS"]
+EXPECTED_METHODS = ["TFS-RF", "TFS-LogReg", "TFS-LASSO", "LLM-only", "LASFS"]
 REQUIRED_MAIN_COLUMNS = {
     "dataset",
     "seed",
     "method",
+    "llm_provider",
+    "llm_model",
     "k",
     "leaky_auroc",
     "leaky_f1",
@@ -31,7 +33,16 @@ REQUIRED_MAIN_COLUMNS = {
     "selected_leakage_ratio",
     "injected_leakage_recall",
 }
-REQUIRED_SELECTED_COLUMNS = {"dataset", "seed", "method", "rank", "feature", "is_injected_leakage"}
+REQUIRED_SELECTED_COLUMNS = {
+    "dataset",
+    "seed",
+    "method",
+    "llm_provider",
+    "llm_model",
+    "rank",
+    "feature",
+    "is_injected_leakage",
+}
 REQUIRED_SEMANTIC_COLUMNS = {
     "dataset",
     "feature",
@@ -39,6 +50,9 @@ REQUIRED_SEMANTIC_COLUMNS = {
     "semantic_relevance",
     "prediction_time_availability",
     "leakage_risk",
+    "scoring_role",
+    "provider",
+    "model",
 }
 
 

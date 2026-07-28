@@ -1,321 +1,321 @@
-Season,Cultivar,Repetition,PH,IFP,NLP,NGP,NGL,NS,MHG,final_outcome_flag,post_decision_status,risk_review_code,yield_class
-1,NEO 760 CE,1,58.8,15.2,98.2,177.8,1.81,5.2,152.2,1,positive_final,B07,low
-1,NEO 760 CE,2,58.6,13.4,102.0,195.0,1.85,7.2,141.69,0,negative_final,B07,high
-1,NEO 760 CE,3,63.4,17.2,100.4,203.0,2.02,6.8,148.81,1,positive_final,B07,low
-1,NEO 760 CE,4,60.27,15.27,100.2,191.93,1.89,6.4,148.5,1,positive_final,B07,low
-1,MANU IPRO,1,81.2,18.0,98.8,173.0,1.75,7.4,145.59,1,positive_final,B07,low
-1,MANU IPRO,2,75.8,20.8,69.2,128.0,1.85,7.2,154.87,1,positive_final,B07,low
-1,MANU IPRO,3,84.4,15.8,95.4,161.8,1.7,6.8,150.23,1,positive_final,A12,low
-1,MANU IPRO,4,80.47,18.2,87.8,154.27,1.77,7.13,149.9,1,positive_final,B07,low
-1,77HO111I2X - GUAPORÉ,1,52.2,14.4,64.8,148.8,2.3,7.2,180.25,0,negative_final,A12,high
-1,77HO111I2X - GUAPORÉ,2,55.8,15.8,72.0,188.8,2.62,6.2,176.75,0,negative_final,C31,high
-1,77HO111I2X - GUAPORÉ,3,54.0,19.4,78.2,182.4,2.33,7.8,173.16,0,negative_final,A12,high
-1,77HO111I2X - GUAPORÉ,4,54.0,16.53,71.67,173.33,2.42,7.07,176.73,0,negative_final,A12,high
-1,NK 7777 IPRO,1,54.0,15.4,82.2,219.2,2.67,8.2,188.27,0,negative_final,B07,high
-1,NK 7777 IPRO,2,59.2,17.0,63.2,176.0,2.78,9.0,184.01,0,negative_final,B07,high
-1,NK 7777 IPRO,3,68.4,17.8,80.0,272.4,2.24,7.0,181.78,0,negative_final,A12,high
-1,NK 7777 IPRO,4,60.53,16.73,75.13,222.53,2.56,8.07,184.69,0,negative_final,A12,high
-1,GNS7900 IPRO - AMPLA,1,55.2,19.8,49.0,80.6,1.64,3.6,161.01,0,negative_final,A12,high
-1,GNS7900 IPRO - AMPLA,2,64.2,18.8,54.4,123.6,2.27,4.0,162.93,0,negative_final,B07,high
-1,GNS7900 IPRO - AMPLA,3,57.2,18.2,50.2,82.2,1.64,4.4,161.34,0,negative_final,B07,high
-1,GNS7900 IPRO - AMPLA,4,58.87,18.93,51.2,95.47,1.85,4.0,163.11,1,positive_final,B07,low
-1,LTT 7901 IPRO,1,60.6,15.8,61.4,136.2,2.22,6.0,164.13,0,negative_final,A12,high
-1,LTT 7901 IPRO,2,66.4,18.2,89.0,191.6,2.15,7.4,163.56,0,negative_final,A12,high
-1,LTT 7901 IPRO,3,66.6,17.6,72.4,155.2,2.14,5.6,165.88,1,positive_final,C31,low
-1,LTT 7901 IPRO,4,64.53,17.2,74.27,161.0,2.17,6.33,165.68,1,positive_final,A12,low
-1,BRASMAX BÔNUS IPRO,1,71.2,19.4,73.0,232.0,2.05,6.4,177.23,0,negative_final,A12,high
-1,BRASMAX BÔNUS IPRO,2,64.0,17.0,58.4,141.4,2.42,6.6,178.3,0,negative_final,A12,high
-1,BRASMAX BÔNUS IPRO,3,68.4,13.4,62.0,250.6,2.21,5.0,183.42,0,negative_final,A12,high
-1,BRASMAX BÔNUS IPRO,4,67.87,16.6,64.47,208.0,2.23,6.0,183.52,1,negative_final,B07,high
-1,97Y97 IPRO,1,53.8,14.0,49.0,130.4,2.66,5.2,167.34,1,positive_final,B07,low
-1,97Y97 IPRO,2,51.0,19.2,64.6,172.0,2.66,5.4,168.24,1,positive_final,B07,low
-1,97Y97 IPRO,3,55.2,18.4,63.8,174.2,2.73,5.0,166.08,1,positive_final,C31,low
-1,97Y97 IPRO,4,53.33,17.2,59.13,158.87,2.68,5.2,172.62,1,positive_final,C31,low
-1,BRASMAX OLIMPO IPRO,1,86.6,23.0,44.0,160.0,2.0,4.8,187.87,0,negative_final,A12,high
-1,BRASMAX OLIMPO IPRO,2,91.0,24.0,71.8,138.4,1.93,5.6,187.38,0,negative_final,A12,high
-1,BRASMAX OLIMPO IPRO,3,84.6,26.4,87.6,226.0,2.58,6.2,177.1,0,negative_final,B07,high
-1,BRASMAX OLIMPO IPRO,4,87.4,24.47,67.8,174.8,2.17,5.53,180.0,0,negative_final,A12,high
-1,LYNDA IPRO,1,55.8,13.6,44.4,88.2,1.99,2.8,196.27,0,negative_final,B07,high
-1,LYNDA IPRO,2,60.6,15.2,59.0,126.6,2.15,3.0,180.87,0,negative_final,B07,high
-1,LYNDA IPRO,3,64.4,25.4,55.4,137.2,2.48,3.0,200.67,0,negative_final,B07,high
-1,LYNDA IPRO,4,60.27,18.07,52.93,117.33,2.2,2.93,201.77,0,negative_final,A12,high
-1,NK 8100 IPRO,1,84.2,16.8,80.6,200.8,2.49,6.8,194.62,1,positive_final,B07,low
-1,NK 8100 IPRO,2,83.6,17.4,56.4,122.4,2.17,5.4,196.67,1,positive_final,C31,low
-1,NK 8100 IPRO,3,74.0,19.0,73.4,186.2,2.54,5.8,194.11,1,positive_final,A12,low
-1,NK 8100 IPRO,4,80.6,17.73,70.13,169.8,2.4,6.0,193.43,1,positive_final,C31,low
-1,82HO111 IPRO - HO COXIM IPRO,1,50.4,17.0,78.8,189.8,2.41,6.6,194.03,0,negative_final,B07,high
-1,82HO111 IPRO - HO COXIM IPRO,2,63.2,14.2,67.2,176.4,2.63,6.0,185.96,1,positive_final,C31,low
-1,82HO111 IPRO - HO COXIM IPRO,3,55.4,14.0,81.8,197.6,2.42,6.2,186.6,1,positive_final,B07,low
-1,82HO111 IPRO - HO COXIM IPRO,4,56.33,15.07,75.93,187.93,2.48,6.27,193.8,1,positive_final,B07,low
-1,83IX84RSF I2X,1,69.4,15.2,103.8,219.2,2.11,5.6,146.16,0,negative_final,B07,high
-1,83IX84RSF I2X,2,79.0,18.2,87.2,208.0,2.39,6.6,148.48,0,negative_final,A12,high
-1,83IX84RSF I2X,3,67.2,14.6,102.4,203.2,1.98,5.6,151.95,0,negative_final,B07,high
-1,83IX84RSF I2X,4,71.87,16.0,97.8,210.13,2.16,5.93,145.72,1,negative_final,B07,high
-1,ADAPTA LTT 8402 IPRO,1,54.4,15.8,55.0,128.8,2.34,5.8,158.46,0,negative_final,B07,high
-1,ADAPTA LTT 8402 IPRO,2,58.6,16.4,54.8,132.8,2.42,5.0,149.77,0,negative_final,A12,high
-1,ADAPTA LTT 8402 IPRO,3,60.0,21.2,60.6,106.2,1.75,5.4,161.6,0,negative_final,B07,high
-1,ADAPTA LTT 8402 IPRO,4,57.67,17.8,56.8,122.6,2.17,5.4,172.2,0,negative_final,A12,high
-1,98R30 CE,1,78.6,17.6,58.6,138.8,2.37,6.6,169.78,0,negative_final,B07,high
-1,98R30 CE,2,73.4,17.0,74.8,183.2,2.45,6.6,160.08,0,negative_final,A12,high
-1,98R30 CE,3,71.0,18.0,58.6,143.6,2.45,6.6,176.58,0,negative_final,A12,high
-1,98R30 CE,4,74.33,17.53,64.0,155.2,2.42,6.6,173.59,0,negative_final,B07,high
-1,FORTALEZA IPRO,1,78.4,16.2,89.8,257.0,2.86,7.0,127.06,0,negative_final,B07,high
-1,FORTALEZA IPRO,2,74.8,18.4,44.0,115.6,2.63,5.2,131.94,0,negative_final,B07,high
-1,FORTALEZA IPRO,3,73.6,16.6,91.2,236.8,2.6,6.6,130.64,0,negative_final,A12,high
-1,FORTALEZA IPRO,4,75.6,17.07,75.0,203.13,2.7,6.27,134.95,0,negative_final,B07,high
-1,MONSOY 8330I2X,1,63.4,14.6,54.6,139.0,2.55,4.2,144.29,0,negative_final,B07,high
-1,MONSOY 8330I2X,2,73.6,19.4,30.0,142.6,4.75,5.0,147.81,0,negative_final,B07,high
-1,MONSOY 8330I2X,3,70.8,18.0,64.8,159.4,2.46,4.2,151.42,0,negative_final,B07,high
-1,MONSOY 8330I2X,4,69.27,17.33,49.8,147.0,3.25,4.47,153.51,0,negative_final,A12,high
-1,SUZY IPRO,1,62.2,15.4,116.4,253.6,2.18,5.6,143.3,1,negative_final,A12,high
-1,SUZY IPRO,2,70.4,12.6,73.0,176.0,2.41,5.6,149.02,0,negative_final,B07,high
-1,SUZY IPRO,3,71.6,16.6,93.4,232.0,2.48,5.8,142.17,0,negative_final,B07,high
-1,SUZY IPRO,4,68.07,14.87,94.27,220.53,2.36,5.67,141.64,0,negative_final,A12,high
-1,TMG 22X83I2X,1,65.8,16.6,39.8,89.6,2.25,4.0,167.45,0,negative_final,A12,high
-1,TMG 22X83I2X,2,77.8,16.0,39.4,92.4,2.35,3.8,178.33,0,negative_final,B07,high
-1,TMG 22X83I2X,3,63.8,16.0,33.2,79.2,2.39,3.4,180.34,0,positive_final,B07,high
-1,TMG 22X83I2X,4,69.13,16.2,37.47,87.07,2.33,3.73,177.98,0,negative_final,A12,high
-1,EXPANDE LTT 8301 IPRO,1,66.6,19.2,32.4,78.8,2.43,4.6,159.05,1,positive_final,C31,low
-1,EXPANDE LTT 8301 IPRO,2,65.8,16.0,33.4,84.8,2.54,4.4,166.83,1,positive_final,C31,low
-1,EXPANDE LTT 8301 IPRO,3,66.8,18.2,37.0,85.4,2.31,3.6,172.32,1,positive_final,B07,low
-1,EXPANDE LTT 8301 IPRO,4,66.4,17.8,34.27,83.0,2.43,4.2,178.41,0,negative_final,A12,high
-1,FORTALECE L090183 RR,1,75.2,18.0,31.2,78.8,2.53,3.2,146.09,0,negative_final,B07,high
-1,FORTALECE L090183 RR,2,68.8,18.6,41.6,100.8,2.42,3.0,155.29,0,negative_final,A12,high
-1,FORTALECE L090183 RR,3,71.0,16.4,67.8,166.4,2.45,3.8,152.79,0,negative_final,B07,high
-1,FORTALECE L090183 RR,4,71.67,17.67,46.87,115.33,2.47,3.33,149.71,0,negative_final,A12,high
-1,96R29 IPRO,1,70.8,17.4,55.0,132.2,2.4,4.8,152.31,0,positive_final,C31,low
-1,96R29 IPRO,2,74.6,16.6,40.8,100.4,2.46,3.8,155.66,1,positive_final,A12,low
-1,96R29 IPRO,3,53.2,14.8,20.2,55.4,2.74,4.6,155.29,1,positive_final,B07,low
-1,96R29 IPRO,4,66.2,16.27,38.67,96.0,2.54,4.4,159.66,1,positive_final,A12,low
-1,74K75RSF CE,1,63.8,15.8,56.8,139.2,2.45,5.4,167.44,1,positive_final,C31,low
-1,74K75RSF CE,2,65.8,13.8,73.6,180.6,2.45,5.0,158.3,1,positive_final,C31,low
-1,74K75RSF CE,3,77.2,17.2,56.6,149.0,2.63,4.4,159.49,1,positive_final,B07,low
-1,74K75RSF CE,4,68.93,15.6,62.33,156.27,2.51,4.93,158.3,1,positive_final,A12,low
-1,FTR 3868 IPRO,1,69.2,17.2,47.6,121.2,2.55,4.8,153.93,1,positive_final,B07,low
-1,FTR 3868 IPRO,2,71.8,16.2,44.2,111.6,2.52,4.6,157.7,1,positive_final,C31,low
-1,FTR 3868 IPRO,3,67.0,15.8,61.6,152.4,2.47,5.8,138.32,1,negative_final,B07,low
-1,FTR 3868 IPRO,4,69.33,16.4,51.13,128.4,2.52,5.07,138.68,1,positive_final,B07,low
-1,GNS7700 IPRO,1,66.2,15.6,46.0,97.0,2.11,3.8,138.18,1,positive_final,B07,low
-1,GNS7700 IPRO,2,69.6,12.6,38.4,97.8,2.55,4.0,135.7,1,positive_final,C31,low
-1,GNS7700 IPRO,3,65.8,14.0,47.2,119.2,2.53,4.0,134.36,1,positive_final,C31,low
-1,GNS7700 IPRO,4,67.2,14.07,43.87,104.67,2.39,3.93,139.74,1,positive_final,B07,low
-1,ELISA IPRO,1,71.4,19.4,46.8,98.2,2.1,3.8,162.09,1,positive_final,A12,low
-1,ELISA IPRO,2,78.0,16.6,42.8,83.0,1.94,4.0,157.75,1,negative_final,C31,low
-1,ELISA IPRO,3,78.8,17.6,48.2,96.6,2.0,4.8,165.4,1,negative_final,C31,low
-1,ELISA IPRO,4,76.07,17.87,45.93,92.6,2.01,4.2,173.0,1,positive_final,B07,low
-1,79I81RSF IPRO,1,70.0,17.8,64.0,144.6,2.26,5.0,180.08,1,positive_final,B07,low
-1,79I81RSF IPRO,2,68.6,15.2,77.6,179.4,2.31,5.0,175.76,1,positive_final,B07,low
-1,79I81RSF IPRO,3,55.6,13.6,51.6,130.0,2.52,4.8,179.29,1,positive_final,C31,low
-1,79I81RSF IPRO,4,64.73,15.53,64.4,151.33,2.36,4.93,184.67,1,positive_final,C31,low
-1,NEO 790 IPRO,1,53.0,17.4,33.0,86.2,2.61,5.6,135.76,1,positive_final,C31,low
-1,NEO 790 IPRO,2,55.2,18.0,34.8,78.8,2.26,5.0,147.81,1,positive_final,B07,low
-1,NEO 790 IPRO,3,52.2,15.6,32.4,47.8,1.48,5.2,141.88,1,positive_final,C31,low
-1,NEO 790 IPRO,4,53.47,17.0,33.4,70.93,2.12,5.27,152.68,1,positive_final,B07,low
-1,PAULA IPRO,1,65.6,15.8,48.8,94.0,1.93,4.8,156.96,0,negative_final,A12,high
-1,PAULA IPRO,2,72.2,17.2,48.4,90.4,1.87,3.6,158.45,0,negative_final,B07,high
-1,PAULA IPRO,3,68.6,16.2,39.4,92.0,2.34,3.8,149.2,1,negative_final,C31,low
-1,PAULA IPRO,4,68.8,16.4,45.53,92.13,2.04,4.07,148.87,0,negative_final,B07,high
-1,FTR 3179 IPRO,1,61.0,13.4,75.6,170.6,2.26,5.0,131.79,1,positive_final,C31,low
-1,FTR 3179 IPRO,2,66.6,15.0,60.0,130.8,2.18,4.8,135.47,1,positive_final,B07,low
-1,FTR 3179 IPRO,3,63.8,14.4,81.6,176.4,2.16,5.0,131.97,1,positive_final,B07,low
-1,FTR 3179 IPRO,4,63.8,14.27,72.4,159.27,2.2,4.93,129.05,1,positive_final,B07,low
-1,LAT 1330BT,1,55.2,14.8,46.0,106.4,2.31,4.4,207.43,1,positive_final,B07,low
-1,LAT 1330BT,2,55.0,10.8,51.2,118.6,2.32,3.4,202.79,1,positive_final,C31,low
-1,LAT 1330BT,3,51.0,15.8,32.6,66.2,2.03,2.8,216.0,1,positive_final,B07,low
-1,LAT 1330BT,4,53.73,13.8,43.27,97.07,2.22,3.53,195.2,1,positive_final,C31,low
-1,FTR 4280 IPRO,1,70.0,17.6,50.6,97.6,1.93,4.0,160.84,0,positive_final,B07,low
-1,FTR 4280 IPRO,2,65.2,16.8,61.4,112.4,1.83,5.2,155.94,1,positive_final,B07,low
-1,FTR 4280 IPRO,3,63.0,17.0,48.2,87.4,1.81,4.4,159.9,1,positive_final,B07,low
-1,FTR 4280 IPRO,4,66.07,17.13,53.4,99.13,1.86,4.53,157.55,1,positive_final,B07,low
-1,ATAQUE I2X,1,71.2,16.4,42.2,61.0,1.45,3.6,130.45,1,positive_final,C31,low
-1,ATAQUE I2X,2,69.2,17.0,54.4,130.8,2.4,3.8,141.36,1,positive_final,C31,low
-1,ATAQUE I2X,3,67.4,16.8,36.8,91.6,2.49,2.8,142.13,1,negative_final,B07,low
-1,ATAQUE I2X,4,69.27,16.73,44.47,94.47,2.11,3.4,140.28,1,positive_final,B07,low
-1,SYN2282IPRO,1,56.2,13.2,43.6,98.2,2.25,2.8,183.46,1,positive_final,B07,low
-1,SYN2282IPRO,2,59.6,15.4,51.6,122.6,2.38,3.6,171.56,1,positive_final,C31,low
-1,SYN2282IPRO,3,59.4,14.6,35.2,77.6,2.2,3.8,172.79,1,positive_final,B07,low
-1,SYN2282IPRO,4,58.4,14.4,43.47,99.47,2.28,3.4,181.22,0,positive_final,B07,low
-1,82I78RSF IPRO,1,58.4,15.4,28.8,70.0,2.43,2.6,150.08,1,positive_final,C31,low
-1,82I78RSF IPRO,2,61.4,15.2,48.8,123.8,2.54,4.2,148.17,1,positive_final,C31,low
-1,82I78RSF IPRO,3,57.0,13.2,49.2,121.2,2.46,4.4,145.99,1,positive_final,B07,low
-1,82I78RSF IPRO,4,58.93,14.6,42.27,105.0,2.48,3.73,145.5,1,positive_final,B07,low
-1,M 8644 IPRO,1,66.8,20.4,33.0,78.2,2.37,4.0,157.85,1,positive_final,C31,low
-1,M 8644 IPRO,2,70.4,16.8,41.0,81.2,1.98,2.8,151.24,1,positive_final,C31,low
-1,M 8644 IPRO,3,68.6,14.8,65.4,61.4,0.94,3.4,146.44,1,positive_final,B07,low
-1,M 8644 IPRO,4,68.6,17.33,46.47,73.6,1.76,3.4,148.86,1,positive_final,C31,low
-1,MONSOY M8606I2X,1,63.4,14.4,63.6,150.6,2.37,2.2,162.9,1,positive_final,C31,low
-1,MONSOY M8606I2X,2,66.4,14.6,56.6,129.6,2.29,2.6,161.98,0,negative_final,B07,high
-1,MONSOY M8606I2X,3,67.8,13.4,48.4,116.6,2.41,2.6,147.2,1,positive_final,C31,low
-1,MONSOY M8606I2X,4,65.87,14.13,56.2,132.27,2.36,2.47,155.75,0,negative_final,B07,high
-1,NK 8770 IPRO,1,65.0,15.2,53.6,143.0,2.67,3.4,174.69,0,negative_final,A12,high
-1,NK 8770 IPRO,2,58.4,14.6,32.0,87.6,2.74,3.2,174.37,1,negative_final,A12,high
-1,NK 8770 IPRO,3,61.8,14.8,48.0,122.8,2.56,3.2,169.03,0,negative_final,A12,high
-1,NK 8770 IPRO,4,61.73,14.87,44.53,117.8,2.65,3.27,179.82,0,negative_final,B07,high
-1,FTR 4288 IPRO,1,63.6,14.8,52.2,117.8,2.26,4.2,151.9,0,negative_final,A12,high
-1,FTR 4288 IPRO,2,63.4,16.4,35.0,79.4,2.27,3.8,152.01,0,negative_final,B07,high
-1,FTR 4288 IPRO,3,60.4,15.4,44.6,131.2,2.94,3.6,150.72,0,negative_final,C31,high
-1,FTR 4288 IPRO,4,62.47,15.53,43.93,109.47,2.49,3.87,153.59,0,negative_final,A12,high
-1,FTR 3190 IPRO,1,64.6,13.4,33.4,70.4,2.11,2.8,157.09,0,negative_final,B07,high
-1,FTR 3190 IPRO,2,67.2,13.4,39.0,59.4,1.52,2.8,157.14,0,negative_final,A12,high
-1,FTR 3190 IPRO,3,70.2,12.8,35.6,81.0,2.28,2.8,159.08,0,negative_final,A12,high
-1,FTR 3190 IPRO,4,67.33,13.2,36.0,70.27,1.97,2.8,155.24,0,negative_final,A12,high
-2,NEO 760 CE,1,76.4,16.0,39.4,99.4,2.52,1.8,162.46,1,positive_final,C31,low
-2,NEO 760 CE,2,80.6,14.6,70.0,174.0,2.49,3.0,169.6,1,positive_final,B07,low
-2,NEO 760 CE,3,65.2,13.2,50.0,126.4,2.53,4.0,150.7,1,positive_final,B07,low
-2,NEO 760 CE,4,74.07,14.6,53.13,133.27,2.51,2.93,161.52,0,positive_final,C31,low
-2,MANU IPRO,1,76.4,16.0,39.4,99.4,2.52,1.8,165.59,1,negative_final,B07,low
-2,MANU IPRO,2,80.6,14.6,70.0,174.0,2.49,3.0,169.38,1,positive_final,C31,low
-2,MANU IPRO,3,65.2,13.2,50.0,126.4,2.53,4.0,165.17,1,positive_final,C31,low
-2,MANU IPRO,4,74.07,14.6,53.13,133.27,2.51,2.93,162.17,1,positive_final,C31,low
-2,77HO111I2X - GUAPORÉ,1,48.0,10.2,24.8,48.0,1.94,1.4,186.65,0,negative_final,A12,high
-2,77HO111I2X - GUAPORÉ,2,47.6,8.2,32.6,70.0,2.15,1.6,186.05,0,negative_final,A12,high
-2,77HO111I2X - GUAPORÉ,3,48.4,10.8,26.0,51.4,1.98,1.6,183.34,0,negative_final,C31,high
-2,77HO111I2X - GUAPORÉ,4,48.0,9.73,27.8,56.47,2.02,1.53,180.22,0,negative_final,B07,high
-2,NK 7777 IPRO,1,64.4,10.6,46.0,101.8,2.21,2.6,187.98,0,negative_final,B07,high
-2,NK 7777 IPRO,2,73.0,10.8,44.0,96.0,2.18,2.2,196.12,0,negative_final,A12,high
-2,NK 7777 IPRO,3,64.2,9.0,46.0,683.4,14.86,0.8,192.58,0,negative_final,A12,high
-2,NK 7777 IPRO,4,67.2,10.13,45.33,293.73,6.42,1.87,187.95,1,negative_final,B07,high
-2,GNS7900 IPRO - AMPLA,1,76.4,15.8,50.2,99.6,1.98,3.0,174.0,0,negative_final,B07,high
-2,GNS7900 IPRO - AMPLA,2,81.6,20.2,49.4,102.2,2.07,1.6,185.41,0,negative_final,B07,high
-2,GNS7900 IPRO - AMPLA,3,80.2,19.2,60.0,135.4,1.15,4.6,185.39,0,negative_final,B07,high
-2,GNS7900 IPRO - AMPLA,4,79.4,18.4,53.2,112.4,1.73,3.07,183.4,0,negative_final,A12,high
-2,LTT 7901 IPRO,1,77.0,18.2,56.6,169.6,3.0,4.4,179.43,0,negative_final,C31,high
-2,LTT 7901 IPRO,2,73.4,15.8,58.8,140.0,2.38,3.0,174.39,0,negative_final,B07,high
-2,LTT 7901 IPRO,3,83.8,15.4,44.0,134.0,3.05,2.6,169.32,0,negative_final,A12,high
-2,LTT 7901 IPRO,4,78.07,16.47,53.13,147.87,2.81,3.33,171.97,0,negative_final,A12,high
-2,BRASMAX BÔNUS IPRO,1,74.2,17.2,42.8,107.0,2.5,1.8,213.24,1,positive_final,C31,low
-2,BRASMAX BÔNUS IPRO,2,78.2,9.8,43.2,67.2,1.56,2.4,206.95,1,positive_final,A12,low
-2,BRASMAX BÔNUS IPRO,3,82.2,13.4,42.6,91.2,2.14,1.6,200.92,1,positive_final,C31,low
-2,BRASMAX BÔNUS IPRO,4,78.2,13.47,42.87,88.47,2.07,1.93,209.8,1,positive_final,B07,low
-2,97Y97 IPRO,1,77.8,17.0,49.8,86.6,1.74,4.0,172.2,1,positive_final,B07,low
-2,97Y97 IPRO,2,77.2,17.4,42.2,95.0,2.25,2.8,173.8,1,positive_final,B07,low
-2,97Y97 IPRO,3,79.2,17.6,43.4,78.8,1.82,4.2,193.33,1,positive_final,B07,low
-2,97Y97 IPRO,4,78.07,17.33,45.13,86.8,1.94,3.67,176.2,1,positive_final,C31,low
-2,BRASMAX OLIMPO IPRO,1,66.6,13.2,38.0,84.4,2.22,3.6,200.86,0,negative_final,B07,high
-2,BRASMAX OLIMPO IPRO,2,75.4,15.0,45.0,113.4,2.52,3.0,194.93,0,negative_final,B07,high
-2,BRASMAX OLIMPO IPRO,3,83.8,14.4,38.0,87.4,2.3,2.2,191.06,0,negative_final,B07,high
-2,BRASMAX OLIMPO IPRO,4,75.27,14.2,40.33,95.07,2.35,2.93,191.75,0,negative_final,A12,high
-2,LYNDA IPRO,1,68.0,17.4,48.6,115.6,2.38,4.0,198.28,1,positive_final,C31,low
-2,LYNDA IPRO,2,62.6,13.2,43.2,77.2,1.79,3.6,204.0,1,positive_final,C31,low
-2,LYNDA IPRO,3,60.4,13.4,47.0,80.4,1.71,3.8,193.68,1,negative_final,C31,low
-2,LYNDA IPRO,4,63.67,14.67,46.27,91.07,1.96,3.8,201.86,1,positive_final,C31,low
-2,NK 8100 IPRO,1,74.8,21.2,84.2,167.0,1.98,5.4,199.54,1,positive_final,B07,low
-2,NK 8100 IPRO,2,71.6,14.4,110.0,180.0,2.35,9.0,196.21,1,positive_final,C31,low
-2,NK 8100 IPRO,3,77.2,18.6,100.4,161.2,1.61,5.8,203.73,0,negative_final,B07,high
-2,NK 8100 IPRO,4,74.53,18.07,98.2,169.4,1.98,6.73,199.71,1,positive_final,C31,low
-2,82HO111 IPRO - HO COXIM IPRO,1,69.8,13.0,123.0,281.8,2.29,3.8,189.92,1,negative_final,C31,high
-2,82HO111 IPRO - HO COXIM IPRO,2,66.8,15.4,100.0,102.2,1.55,5.0,197.06,0,negative_final,A12,high
-2,82HO111 IPRO - HO COXIM IPRO,3,69.4,13.4,114.0,266.0,2.33,5.0,202.59,0,negative_final,A12,high
-2,82HO111 IPRO - HO COXIM IPRO,4,68.67,13.93,112.33,216.67,2.06,4.6,201.31,0,negative_final,B07,high
-2,83IX84RSF I2X,1,80.0,18.6,49.8,74.6,1.5,3.4,162.9,0,negative_final,A12,high
-2,83IX84RSF I2X,2,83.6,17.8,45.0,64.0,1.42,3.6,170.42,0,negative_final,A12,high
-2,83IX84RSF I2X,3,81.8,16.0,42.0,53.0,1.26,3.4,161.74,0,negative_final,B07,high
-2,83IX84RSF I2X,4,81.8,17.47,45.6,63.87,1.39,3.47,164.87,0,negative_final,B07,high
-2,ADAPTA LTT 8402 IPRO,1,58.6,9.8,55.6,117.6,2.12,3.2,180.93,1,positive_final,C31,low
-2,ADAPTA LTT 8402 IPRO,2,58.2,9.8,55.4,129.2,2.33,2.4,179.21,1,positive_final,B07,low
-2,ADAPTA LTT 8402 IPRO,3,61.6,11.8,48.0,123.8,2.58,3.2,181.4,1,negative_final,B07,low
-2,ADAPTA LTT 8402 IPRO,4,59.47,10.47,53.0,123.53,2.34,2.93,173.3,1,positive_final,C31,low
-2,98R30 CE,1,69.8,12.4,103.2,264.6,2.56,4.0,182.0,1,positive_final,C31,low
-2,98R30 CE,2,75.8,14.4,85.2,214.6,2.52,3.4,184.42,1,positive_final,B07,low
-2,98R30 CE,3,72.6,16.2,80.0,80.4,2.09,2.8,183.11,1,positive_final,C31,low
-2,98R30 CE,4,72.73,14.33,89.47,186.53,2.39,3.4,175.96,1,positive_final,B07,low
-2,FORTALEZA IPRO,1,62.8,13.2,42.0,88.4,2.1,3.6,137.6,0,negative_final,B07,high
-2,FORTALEZA IPRO,2,70.0,12.6,58.0,137.8,2.38,4.2,127.76,1,positive_final,C31,low
-2,FORTALEZA IPRO,3,65.4,12.2,57.4,108.4,1.89,5.6,130.46,1,positive_final,C31,low
-2,FORTALEZA IPRO,4,66.07,12.67,52.47,111.53,2.12,4.47,132.81,0,negative_final,B07,high
-2,MONSOY 8330I2X,1,59.4,12.2,56.8,138.6,2.44,3.6,148.42,1,positive_final,B07,low
-2,MONSOY 8330I2X,2,61.4,11.6,56.2,115.6,2.06,4.2,158.09,0,negative_final,A12,high
-2,MONSOY 8330I2X,3,61.4,10.8,72.0,159.0,2.21,3.8,158.53,1,negative_final,A12,high
-2,MONSOY 8330I2X,4,60.73,11.53,61.67,137.73,2.24,3.87,158.78,0,negative_final,B07,high
-2,SUZY IPRO,1,63.8,11.6,58.0,104.2,1.8,2.6,154.26,0,negative_final,C31,high
-2,SUZY IPRO,2,74.2,16.8,57.4,99.6,1.74,4.0,149.29,0,negative_final,B07,high
-2,SUZY IPRO,3,73.6,15.2,50.6,87.2,1.72,2.4,154.03,0,negative_final,A12,high
-2,SUZY IPRO,4,70.53,14.53,55.33,97.0,1.75,3.0,155.77,0,negative_final,B07,high
-2,TMG 22X83I2X,1,65.2,12.8,75.2,105.0,2.48,4.0,184.11,1,positive_final,C31,low
-2,TMG 22X83I2X,2,66.2,11.2,53.0,86.0,1.62,3.2,184.17,1,positive_final,C31,low
-2,TMG 22X83I2X,3,55.4,9.0,82.0,114.4,1.4,3.2,182.95,1,negative_final,C31,low
-2,TMG 22X83I2X,4,62.27,11.0,70.07,101.8,1.83,3.47,183.13,0,negative_final,A12,high
-2,EXPANDE LTT 8301 IPRO,1,62.0,10.2,58.0,132.0,2.28,3.4,186.24,0,negative_final,A12,high
-2,EXPANDE LTT 8301 IPRO,2,68.4,14.4,67.2,151.0,2.25,3.4,182.05,0,negative_final,B07,high
-2,EXPANDE LTT 8301 IPRO,3,67.0,17.4,58.0,125.6,2.17,3.4,180.33,1,negative_final,B07,high
-2,EXPANDE LTT 8301 IPRO,4,65.8,14.0,61.07,136.2,2.23,3.4,189.46,0,negative_final,A12,high
-2,FORTALECE L090183 RR,1,61.8,12.2,37.6,69.4,1.85,0.4,165.68,1,positive_final,C31,low
-2,FORTALECE L090183 RR,2,63.0,16.8,45.8,112.4,2.45,2.0,157.15,1,positive_final,B07,low
-2,FORTALECE L090183 RR,3,61.6,16.8,50.0,121.4,1.2,2.2,162.17,1,positive_final,B07,low
-2,FORTALECE L090183 RR,4,62.13,15.27,44.47,101.07,1.83,1.53,158.04,0,negative_final,B07,high
-2,96R29 IPRO,1,66.2,16.0,46.6,100.8,2.16,2.4,152.78,1,positive_final,C31,low
-2,96R29 IPRO,2,59.2,16.0,34.4,88.2,2.56,3.0,164.61,1,positive_final,C31,low
-2,96R29 IPRO,3,65.0,12.8,57.4,138.0,2.4,3.2,167.22,1,positive_final,B07,low
-2,96R29 IPRO,4,63.47,14.93,46.13,109.0,2.38,2.87,157.2,1,positive_final,C31,low
-2,74K75RSF CE,1,70.4,14.0,50.4,118.4,2.35,4.4,162.2,0,negative_final,B07,high
-2,74K75RSF CE,2,82.2,14.4,44.0,97.4,2.21,2.8,168.01,0,negative_final,B07,high
-2,74K75RSF CE,3,74.0,15.4,66.4,111.0,1.67,4.0,174.2,0,negative_final,A12,high
-2,74K75RSF CE,4,75.53,14.6,53.6,108.93,2.08,3.73,176.96,0,negative_final,B07,high
-2,FTR 3868 IPRO,1,82.0,18.2,36.6,93.0,2.54,2.4,163.69,0,negative_final,B07,high
-2,FTR 3868 IPRO,2,77.4,15.8,36.0,86.4,2.4,1.8,164.92,0,negative_final,C31,high
-2,FTR 3868 IPRO,3,72.4,15.2,43.2,89.4,2.07,3.0,163.33,0,negative_final,A12,high
-2,FTR 3868 IPRO,4,77.27,16.4,38.6,89.6,2.34,2.4,157.72,0,negative_final,B07,high
-2,GNS7700 IPRO,1,79.8,13.6,61.8,166.0,2.69,2.8,162.02,1,positive_final,B07,low
-2,GNS7700 IPRO,2,70.6,21.8,43.6,122.8,2.82,2.0,162.85,1,positive_final,B07,low
-2,GNS7700 IPRO,3,75.0,15.0,47.0,98.0,2.09,2.2,168.54,1,positive_final,C31,low
-2,GNS7700 IPRO,4,75.13,16.8,50.8,128.93,2.53,2.33,171.37,1,positive_final,B07,low
-2,ELISA IPRO,1,67.0,13.6,53.2,165.0,3.1,3.8,178.0,0,negative_final,B07,high
-2,ELISA IPRO,2,70.6,19.4,42.6,99.0,2.32,3.4,175.4,0,negative_final,A12,high
-2,ELISA IPRO,3,74.8,14.0,36.0,83.0,2.31,3.0,173.6,0,negative_final,C31,high
-2,ELISA IPRO,4,70.8,15.67,43.93,115.67,2.58,3.4,177.4,0,negative_final,B07,high
-2,79I81RSF IPRO,1,69.0,9.6,62.8,140.0,2.23,3.0,201.3,0,negative_final,B07,high
-2,79I81RSF IPRO,2,64.4,8.4,61.8,159.0,2.57,2.2,196.72,0,negative_final,A12,high
-2,79I81RSF IPRO,3,68.6,11.0,61.4,157.0,2.56,3.4,198.38,0,negative_final,A12,high
-2,79I81RSF IPRO,4,67.33,9.67,62.0,152.0,2.45,2.87,193.0,0,negative_final,A12,high
-2,NEO 790 IPRO,1,64.0,11.4,75.6,241.0,3.19,4.6,189.85,1,positive_final,B07,low
-2,NEO 790 IPRO,2,64.0,15.4,50.4,121.2,2.4,4.0,192.48,0,negative_final,C31,low
-2,NEO 790 IPRO,3,63.6,17.0,87.2,215.6,2.47,4.6,190.0,0,negative_final,A12,high
-2,NEO 790 IPRO,4,63.87,14.6,71.07,192.6,2.69,4.4,193.04,0,negative_final,A12,high
-2,PAULA IPRO,1,73.0,10.4,87.6,181.8,2.08,4.0,184.2,1,positive_final,B07,low
-2,PAULA IPRO,2,78.2,11.6,76.0,105.8,1.39,4.0,185.66,0,negative_final,A12,high
-2,PAULA IPRO,3,66.4,9.6,69.6,123.2,1.77,3.0,180.83,0,positive_final,B07,high
-2,PAULA IPRO,4,72.53,10.53,77.73,136.93,1.75,3.67,185.47,1,positive_final,C31,low
-2,FTR 3179 IPRO,1,75.4,13.6,53.2,100.4,1.89,1.8,156.6,1,positive_final,A12,low
-2,FTR 3179 IPRO,2,74.2,11.4,53.0,93.6,1.77,2.0,143.24,1,positive_final,C31,low
-2,FTR 3179 IPRO,3,74.4,13.6,48.4,94.6,1.95,2.0,142.2,1,positive_final,C31,low
-2,FTR 3179 IPRO,4,74.67,12.87,51.53,96.2,1.87,1.93,145.3,1,positive_final,B07,low
-2,LAT 1330BT,1,76.4,12.2,37.6,91.8,2.44,2.0,190.98,0,positive_final,A12,low
-2,LAT 1330BT,2,63.6,19.8,63.0,139.4,2.21,2.4,200.04,1,positive_final,B07,low
-2,LAT 1330BT,3,66.6,12.6,34.4,78.4,2.28,1.6,211.24,1,positive_final,B07,low
-2,LAT 1330BT,4,68.87,14.87,45.0,103.2,2.31,2.0,208.97,1,positive_final,B07,low
-2,FTR 4280 IPRO,1,67.0,12.2,55.2,89.6,1.62,5.4,179.42,1,positive_final,B07,low
-2,FTR 4280 IPRO,2,67.4,13.8,70.0,160.4,2.29,3.8,180.25,1,positive_final,C31,low
-2,FTR 4280 IPRO,3,64.4,13.4,47.2,82.6,1.75,3.4,186.33,0,positive_final,B07,low
-2,FTR 4280 IPRO,4,66.27,13.13,57.47,110.87,1.89,4.2,177.21,1,positive_final,C31,low
-2,ATAQUE I2X,1,80.8,21.0,81.4,173.8,2.14,5.6,152.05,0,negative_final,A12,high
-2,ATAQUE I2X,2,63.4,21.2,51.6,103.0,2.0,3.6,155.08,0,negative_final,A12,high
-2,ATAQUE I2X,3,69.6,19.6,77.0,205.6,2.67,5.4,161.59,0,negative_final,B07,high
-2,ATAQUE I2X,4,71.27,20.6,70.0,160.8,2.27,4.87,166.22,0,negative_final,B07,high
-2,SYN2282IPRO,1,63.0,16.2,79.4,182.4,2.3,4.0,205.57,0,negative_final,B07,high
-2,SYN2282IPRO,2,66.6,18.6,60.0,121.4,2.02,3.8,194.94,0,negative_final,A12,high
-2,SYN2282IPRO,3,64.2,18.4,70.4,125.2,1.78,3.6,204.17,0,negative_final,A12,high
-2,SYN2282IPRO,4,64.6,17.73,69.93,143.0,2.03,3.8,204.89,0,negative_final,A12,high
-2,82I78RSF IPRO,1,86.8,19.0,106.4,191.6,1.8,3.6,171.6,1,positive_final,B07,low
-2,82I78RSF IPRO,2,87.2,19.4,92.8,201.0,2.17,5.0,172.59,1,positive_final,C31,low
-2,82I78RSF IPRO,3,87.8,24.2,79.6,146.0,1.83,4.8,169.62,1,positive_final,B07,low
-2,82I78RSF IPRO,4,87.27,20.87,92.93,179.53,1.93,4.47,162.59,0,positive_final,A12,high
-2,M 8644 IPRO,1,63.6,12.2,32.0,80.8,2.53,3.2,159.15,1,positive_final,C31,low
-2,M 8644 IPRO,2,60.8,11.0,43.2,104.2,2.41,3.0,164.86,1,positive_final,B07,low
-2,M 8644 IPRO,3,61.4,9.2,34.0,85.4,2.51,2.8,163.72,1,positive_final,B07,low
-2,M 8644 IPRO,4,61.93,10.8,36.4,90.13,2.48,3.0,157.93,1,positive_final,B07,low
-2,MONSOY M8606I2X,1,78.2,8.0,81.4,249.8,3.07,4.8,150.53,0,negative_final,A12,high
-2,MONSOY M8606I2X,2,63.0,7.2,109.4,440.0,4.02,4.4,150.82,0,negative_final,B07,high
-2,MONSOY M8606I2X,3,67.2,8.6,102.0,209.0,2.05,4.0,153.97,0,negative_final,B07,high
-2,MONSOY M8606I2X,4,69.47,7.93,97.6,299.6,3.05,4.4,154.1,0,negative_final,B07,high
-2,NK 8770 IPRO,1,89.8,15.6,97.6,208.0,2.13,3.2,173.64,1,positive_final,B07,low
-2,NK 8770 IPRO,2,87.6,15.0,55.0,104.0,1.89,2.2,175.92,1,positive_final,C31,low
-2,NK 8770 IPRO,3,91.4,18.2,60.2,141.4,2.35,3.6,166.68,1,positive_final,C31,low
-2,NK 8770 IPRO,4,89.6,16.27,70.93,151.13,2.12,3.0,160.81,1,positive_final,B07,low
-2,FTR 4288 IPRO,1,82.6,16.0,84.0,147.2,1.75,3.6,146.98,0,positive_final,B07,high
-2,FTR 4288 IPRO,2,87.6,15.8,79.2,151.8,1.92,3.8,139.22,0,negative_final,A12,high
-2,FTR 4288 IPRO,3,94.8,17.2,64.0,118.0,1.84,3.6,135.65,1,negative_final,C31,low
-2,FTR 4288 IPRO,4,88.33,16.33,75.73,139.0,1.84,3.67,135.19,1,positive_final,C31,low
-2,FTR 3190 IPRO,1,64.4,16.6,76.0,168.0,2.21,3.6,145.69,0,negative_final,A12,high
-2,FTR 3190 IPRO,2,64.6,17.6,116.8,271.2,2.32,3.8,147.24,0,negative_final,A12,high
-2,FTR 3190 IPRO,3,58.8,14.8,86.4,180.6,2.09,2.2,156.32,0,negative_final,A12,high
-2,FTR 3190 IPRO,4,62.6,16.33,93.07,206.6,2.21,3.2,157.61,0,negative_final,B07,high
+Season,Cultivar,Repetition,PH,IFP,NLP,NGP,NGL,NS,MHG,final_outcome_flag,post_decision_status,risk_review_code,confirmed_result_code,case_resolution_type,followup_action_group,outcome_verification_score,workflow_bucket_id,service_path_code,review_priority_index,yield_class
+1,NEO 760 CE,1,58.8,15.2,98.2,177.8,1.81,5.2,152.2,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.22396627402931418,low
+1,NEO 760 CE,2,58.6,13.4,102.0,195.0,1.85,7.2,141.69,0,pending,route_c,type_1,group_n,B07,0.0,route_f,type_1,0.9333937262574912,high
+1,NEO 760 CE,3,63.4,17.2,100.4,203.0,2.02,6.8,148.81,1,closed,route_f,type_1,group_x,B07,0.8676133018986408,route_f,type_1,0.0,low
+1,NEO 760 CE,4,60.27,15.27,100.2,191.93,1.89,6.4,148.5,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_1,0.1981650548921553,low
+1,MANU IPRO,1,81.2,18.0,98.8,173.0,1.75,7.4,145.59,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.8909944331983785,low
+1,MANU IPRO,2,75.8,20.8,69.2,128.0,1.85,7.2,154.87,1,closed,route_f,type_4,group_x,B07,0.0,route_f,type_4,0.9923546055241725,low
+1,MANU IPRO,3,84.4,15.8,95.4,161.8,1.7,6.8,150.23,1,closed,route_c,type_4,group_x,B07,0.9761093194724367,route_f,type_4,0.679784566744024,low
+1,MANU IPRO,4,80.47,18.2,87.8,154.27,1.77,7.13,149.9,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+1,77HO111I2X - GUAPORÉ,1,52.2,14.4,64.8,148.8,2.3,7.2,180.25,0,pending,route_c,type_1,group_n,A12,0.9714927355353254,route_c,type_1,1.0,high
+1,77HO111I2X - GUAPORÉ,2,55.8,15.8,72.0,188.8,2.62,6.2,176.75,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.14604813799195784,high
+1,77HO111I2X - GUAPORÉ,3,54.0,19.4,78.2,182.4,2.33,7.8,173.16,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.2960143314283292,high
+1,77HO111I2X - GUAPORÉ,4,54.0,16.53,71.67,173.33,2.42,7.07,176.73,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_4,0.8286643174240905,high
+1,NK 7777 IPRO,1,54.0,15.4,82.2,219.2,2.67,8.2,188.27,0,pending,route_c,type_4,group_n,A12,0.01203100312833133,route_f,type_1,1.0,high
+1,NK 7777 IPRO,2,59.2,17.0,63.2,176.0,2.78,9.0,184.01,0,pending,route_c,type_1,group_n,A12,0.08013488468795026,route_c,type_1,0.8090101153151986,high
+1,NK 7777 IPRO,3,68.4,17.8,80.0,272.4,2.24,7.0,181.78,0,pending,route_c,type_1,group_n,A12,0.14321344715599044,route_f,type_1,0.9538774770197781,high
+1,NK 7777 IPRO,4,60.53,16.73,75.13,222.53,2.56,8.07,184.69,0,pending,route_c,type_1,group_n,A12,0.9609989266326394,route_c,type_1,0.1563728241638822,high
+1,GNS7900 IPRO - AMPLA,1,55.2,19.8,49.0,80.6,1.64,3.6,161.01,0,pending,route_c,type_1,group_x,B07,0.0,route_f,type_4,0.02061867415341797,high
+1,GNS7900 IPRO - AMPLA,2,64.2,18.8,54.4,123.6,2.27,4.0,162.93,0,pending,route_c,type_1,group_n,A12,0.05798937674329558,route_f,type_1,0.0,high
+1,GNS7900 IPRO - AMPLA,3,57.2,18.2,50.2,82.2,1.64,4.4,161.34,0,pending,route_c,type_1,group_n,A12,0.08093695142443819,route_f,type_1,0.7337066061286049,high
+1,GNS7900 IPRO - AMPLA,4,58.87,18.93,51.2,95.47,1.85,4.0,163.11,1,closed,route_f,type_4,group_x,A12,0.0,route_f,type_4,0.7203143038731183,low
+1,LTT 7901 IPRO,1,60.6,15.8,61.4,136.2,2.22,6.0,164.13,0,pending,route_c,type_1,group_n,A12,0.10472713569801782,route_f,type_1,0.09951914946276702,high
+1,LTT 7901 IPRO,2,66.4,18.2,89.0,191.6,2.15,7.4,163.56,0,pending,route_c,type_1,group_n,A12,0.12979505770316643,route_f,type_4,1.0,high
+1,LTT 7901 IPRO,3,66.6,17.6,72.4,155.2,2.14,5.6,165.88,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+1,LTT 7901 IPRO,4,64.53,17.2,74.27,161.0,2.17,6.33,165.68,1,closed,route_f,type_4,group_x,A12,1.0,route_f,type_4,0.616062997172922,low
+1,BRASMAX BÔNUS IPRO,1,71.2,19.4,73.0,232.0,2.05,6.4,177.23,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.28776787745913124,high
+1,BRASMAX BÔNUS IPRO,2,64.0,17.0,58.4,141.4,2.42,6.6,178.3,0,pending,route_c,type_1,group_n,A12,0.0018415127365577328,route_c,type_4,1.0,high
+1,BRASMAX BÔNUS IPRO,3,68.4,13.4,62.0,250.6,2.21,5.0,183.42,0,pending,route_c,type_1,group_n,A12,0.0014942948019724684,route_c,type_1,0.0,high
+1,BRASMAX BÔNUS IPRO,4,67.87,16.6,64.47,208.0,2.23,6.0,183.52,0,pending,route_c,type_4,group_n,A12,0.0,route_f,type_1,0.9386016726161243,high
+1,97Y97 IPRO,1,53.8,14.0,49.0,130.4,2.66,5.2,167.34,1,closed,route_f,type_4,group_n,B07,0.0,route_c,type_4,0.22184328832790143,low
+1,97Y97 IPRO,2,51.0,19.2,64.6,172.0,2.66,5.4,168.24,1,closed,route_f,type_4,group_x,B07,0.803163034571883,route_f,type_1,0.11146278596429401,low
+1,97Y97 IPRO,3,55.2,18.4,63.8,174.2,2.73,5.0,166.08,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.7349082518914329,low
+1,97Y97 IPRO,4,53.33,17.2,59.13,158.87,2.68,5.2,172.62,1,closed,route_f,type_4,group_x,B07,0.0,route_f,type_4,0.12367528654872931,low
+1,BRASMAX OLIMPO IPRO,1,86.6,23.0,44.0,160.0,2.0,4.8,187.87,0,pending,route_c,type_1,group_n,A12,0.011394136199060313,route_c,type_4,0.0,high
+1,BRASMAX OLIMPO IPRO,2,91.0,24.0,71.8,138.4,1.93,5.6,187.38,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_1,0.9548785094091647,high
+1,BRASMAX OLIMPO IPRO,3,84.6,26.4,87.6,226.0,2.58,6.2,177.1,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_1,0.23043624580350985,high
+1,BRASMAX OLIMPO IPRO,4,87.4,24.47,67.8,174.8,2.17,5.53,180.0,0,pending,route_c,type_1,group_n,A12,0.031044532749938944,route_c,type_4,0.0037248286531922662,high
+1,LYNDA IPRO,1,55.8,13.6,44.4,88.2,1.99,2.8,196.27,0,pending,route_c,type_1,group_n,A12,0.019997102301860716,route_c,type_4,0.0,high
+1,LYNDA IPRO,2,60.6,15.2,59.0,126.6,2.15,3.0,180.87,0,pending,route_c,type_4,group_x,A12,1.0,route_c,type_1,1.0,high
+1,LYNDA IPRO,3,64.4,25.4,55.4,137.2,2.48,3.0,200.67,0,pending,route_c,type_1,group_n,A12,0.28962694905033537,route_f,type_4,1.0,high
+1,LYNDA IPRO,4,60.27,18.07,52.93,117.33,2.2,2.93,201.77,0,pending,route_c,type_1,group_n,A12,0.0367408628854372,route_f,type_1,0.2652830378055574,high
+1,NK 8100 IPRO,1,84.2,16.8,80.6,200.8,2.49,6.8,194.62,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,0.17705434176039342,low
+1,NK 8100 IPRO,2,83.6,17.4,56.4,122.4,2.17,5.4,196.67,1,closed,route_f,type_4,group_x,A12,0.8572231239250794,route_c,type_4,1.0,low
+1,NK 8100 IPRO,3,74.0,19.0,73.4,186.2,2.54,5.8,194.11,1,closed,route_c,type_1,group_n,B07,0.8294847641289304,route_f,type_4,1.0,low
+1,NK 8100 IPRO,4,80.6,17.73,70.13,169.8,2.4,6.0,193.43,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+1,82HO111 IPRO - HO COXIM IPRO,1,50.4,17.0,78.8,189.8,2.41,6.6,194.03,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.01812557245217235,high
+1,82HO111 IPRO - HO COXIM IPRO,2,63.2,14.2,67.2,176.4,2.63,6.0,185.96,1,closed,route_f,type_4,group_x,B07,0.0,route_f,type_1,0.9519549068827761,low
+1,82HO111 IPRO - HO COXIM IPRO,3,55.4,14.0,81.8,197.6,2.42,6.2,186.6,1,closed,route_f,type_4,group_x,B07,0.9948193929388067,route_f,type_4,0.0,low
+1,82HO111 IPRO - HO COXIM IPRO,4,56.33,15.07,75.93,187.93,2.48,6.27,193.8,1,closed,route_f,type_4,group_x,B07,0.988049505227496,route_f,type_4,0.8065494194639887,low
+1,83IX84RSF I2X,1,69.4,15.2,103.8,219.2,2.11,5.6,146.16,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.94289206740812,high
+1,83IX84RSF I2X,2,79.0,18.2,87.2,208.0,2.39,6.6,148.48,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.04889406231949193,high
+1,83IX84RSF I2X,3,67.2,14.6,102.4,203.2,1.98,5.6,151.95,0,pending,route_c,type_1,group_n,A12,0.16289228258863883,route_f,type_4,1.0,high
+1,83IX84RSF I2X,4,71.87,16.0,97.8,210.13,2.16,5.93,145.72,1,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.9915360613552087,high
+1,ADAPTA LTT 8402 IPRO,1,54.4,15.8,55.0,128.8,2.34,5.8,158.46,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.20320394890272694,high
+1,ADAPTA LTT 8402 IPRO,2,58.6,16.4,54.8,132.8,2.42,5.0,149.77,0,pending,route_c,type_1,group_n,B07,0.12489365476922248,route_c,type_4,1.0,high
+1,ADAPTA LTT 8402 IPRO,3,60.0,21.2,60.6,106.2,1.75,5.4,161.6,0,pending,route_c,type_1,group_n,A12,0.06522934083178987,route_c,type_1,0.9531320234680198,high
+1,ADAPTA LTT 8402 IPRO,4,57.67,17.8,56.8,122.6,2.17,5.4,172.2,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.12042476780246222,high
+1,98R30 CE,1,78.6,17.6,58.6,138.8,2.37,6.6,169.78,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.9506855715507155,high
+1,98R30 CE,2,73.4,17.0,74.8,183.2,2.45,6.6,160.08,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.26773251855089153,high
+1,98R30 CE,3,71.0,18.0,58.6,143.6,2.45,6.6,176.58,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_4,1.0,high
+1,98R30 CE,4,74.33,17.53,64.0,155.2,2.42,6.6,173.59,0,pending,route_c,type_1,group_n,B07,0.15445155190960605,route_c,type_1,0.758927039675608,high
+1,FORTALEZA IPRO,1,78.4,16.2,89.8,257.0,2.86,7.0,127.06,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_4,1.0,high
+1,FORTALEZA IPRO,2,74.8,18.4,44.0,115.6,2.63,5.2,131.94,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.3337427127693356,high
+1,FORTALEZA IPRO,3,73.6,16.6,91.2,236.8,2.6,6.6,130.64,0,pending,route_c,type_1,group_n,A12,0.08945666743607399,route_f,type_1,0.0,high
+1,FORTALEZA IPRO,4,75.6,17.07,75.0,203.13,2.7,6.27,134.95,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,1.0,high
+1,MONSOY 8330I2X,1,63.4,14.6,54.6,139.0,2.55,4.2,144.29,0,pending,route_c,type_1,group_n,A12,0.13697666725190422,route_f,type_4,0.1105404646421769,high
+1,MONSOY 8330I2X,2,73.6,19.4,30.0,142.6,4.75,5.0,147.81,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.0,high
+1,MONSOY 8330I2X,3,70.8,18.0,64.8,159.4,2.46,4.2,151.42,0,pending,route_c,type_1,group_n,A12,0.043989402883043836,route_c,type_4,0.10341835971573657,high
+1,MONSOY 8330I2X,4,69.27,17.33,49.8,147.0,3.25,4.47,153.51,0,pending,route_c,type_1,group_n,A12,0.03268551732342359,route_c,type_1,0.0,high
+1,SUZY IPRO,1,62.2,15.4,116.4,253.6,2.18,5.6,143.3,0,pending,route_c,type_1,group_n,B07,0.14370769686895946,route_c,type_1,0.0,high
+1,SUZY IPRO,2,70.4,12.6,73.0,176.0,2.41,5.6,149.02,0,pending,route_c,type_1,group_x,A12,0.0729974804683941,route_c,type_4,0.21783390091757385,high
+1,SUZY IPRO,3,71.6,16.6,93.4,232.0,2.48,5.8,142.17,0,pending,route_c,type_1,group_n,A12,0.6850090098457775,route_c,type_4,0.07224314878744248,high
+1,SUZY IPRO,4,68.07,14.87,94.27,220.53,2.36,5.67,141.64,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_4,0.0,high
+1,TMG 22X83I2X,1,65.8,16.6,39.8,89.6,2.25,4.0,167.45,0,pending,route_c,type_1,group_n,A12,0.01831217963930961,route_c,type_4,1.0,high
+1,TMG 22X83I2X,2,77.8,16.0,39.4,92.4,2.35,3.8,178.33,0,pending,route_c,type_1,group_n,B07,0.9741651650891282,route_f,type_1,0.9878313198295858,high
+1,TMG 22X83I2X,3,63.8,16.0,33.2,79.2,2.39,3.4,180.34,0,closed,route_c,type_1,group_n,A12,0.06328342169277208,route_c,type_1,0.0025471467262462326,high
+1,TMG 22X83I2X,4,69.13,16.2,37.47,87.07,2.33,3.73,177.98,0,pending,route_c,type_1,group_x,A12,0.10459106862623596,route_c,type_1,1.0,high
+1,EXPANDE LTT 8301 IPRO,1,66.6,19.2,32.4,78.8,2.43,4.6,159.05,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.0,low
+1,EXPANDE LTT 8301 IPRO,2,65.8,16.0,33.4,84.8,2.54,4.4,166.83,1,closed,route_f,type_4,group_x,B07,0.9716085701115333,route_f,type_4,0.008168122124824866,low
+1,EXPANDE LTT 8301 IPRO,3,66.8,18.2,37.0,85.4,2.31,3.6,172.32,1,closed,route_f,type_4,group_x,B07,0.7553603460265363,route_c,type_1,0.0,low
+1,EXPANDE LTT 8301 IPRO,4,66.4,17.8,34.27,83.0,2.43,4.2,178.41,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_1,0.0,high
+1,FORTALECE L090183 RR,1,75.2,18.0,31.2,78.8,2.53,3.2,146.09,0,pending,route_c,type_4,group_n,A12,0.05516877962841156,route_c,type_4,0.0,high
+1,FORTALECE L090183 RR,2,68.8,18.6,41.6,100.8,2.42,3.0,155.29,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.317561805530426,high
+1,FORTALECE L090183 RR,3,71.0,16.4,67.8,166.4,2.45,3.8,152.79,0,pending,route_c,type_1,group_n,A12,0.08364390174110886,route_c,type_1,1.0,high
+1,FORTALECE L090183 RR,4,71.67,17.67,46.87,115.33,2.47,3.33,149.71,0,pending,route_c,type_1,group_x,A12,0.12036211188791784,route_c,type_4,0.0,high
+1,96R29 IPRO,1,70.8,17.4,55.0,132.2,2.4,4.8,152.31,1,closed,route_f,type_1,group_x,A12,0.01680987435919914,route_f,type_4,0.6880782388906969,low
+1,96R29 IPRO,2,74.6,16.6,40.8,100.4,2.46,3.8,155.66,1,closed,route_f,type_4,group_x,B07,0.5940491677136075,route_f,type_4,0.9772868102276068,low
+1,96R29 IPRO,3,53.2,14.8,20.2,55.4,2.74,4.6,155.29,1,closed,route_f,type_4,group_x,B07,0.830653291940686,route_f,type_1,1.0,low
+1,96R29 IPRO,4,66.2,16.27,38.67,96.0,2.54,4.4,159.66,1,closed,route_f,type_4,group_n,B07,0.24992006350868085,route_f,type_4,0.9621814777021186,low
+1,74K75RSF CE,1,63.8,15.8,56.8,139.2,2.45,5.4,167.44,1,closed,route_f,type_4,group_x,B07,0.9275837424237399,route_f,type_4,1.0,low
+1,74K75RSF CE,2,65.8,13.8,73.6,180.6,2.45,5.0,158.3,1,closed,route_f,type_4,group_x,B07,0.737101022935408,route_f,type_4,1.0,low
+1,74K75RSF CE,3,77.2,17.2,56.6,149.0,2.63,4.4,159.49,1,closed,route_f,type_4,group_n,B07,0.1636702789511111,route_f,type_4,1.0,low
+1,74K75RSF CE,4,68.93,15.6,62.33,156.27,2.51,4.93,158.3,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,0.7295165968658247,low
+1,FTR 3868 IPRO,1,69.2,17.2,47.6,121.2,2.55,4.8,153.93,1,closed,route_f,type_4,group_x,B07,0.14640461478689862,route_c,type_4,1.0,low
+1,FTR 3868 IPRO,2,71.8,16.2,44.2,111.6,2.52,4.6,157.7,1,closed,route_f,type_1,group_x,B07,1.0,route_c,type_4,0.0,low
+1,FTR 3868 IPRO,3,67.0,15.8,61.6,152.4,2.47,5.8,138.32,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+1,FTR 3868 IPRO,4,69.33,16.4,51.13,128.4,2.52,5.07,138.68,1,closed,route_f,type_4,group_n,B07,1.0,route_f,type_1,0.0,low
+1,GNS7700 IPRO,1,66.2,15.6,46.0,97.0,2.11,3.8,138.18,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.03585249287075728,low
+1,GNS7700 IPRO,2,69.6,12.6,38.4,97.8,2.55,4.0,135.7,1,closed,route_f,type_4,group_x,B07,0.30175953443368303,route_c,type_4,1.0,low
+1,GNS7700 IPRO,3,65.8,14.0,47.2,119.2,2.53,4.0,134.36,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.968808253393387,low
+1,GNS7700 IPRO,4,67.2,14.07,43.87,104.67,2.39,3.93,139.74,1,closed,route_f,type_4,group_x,B07,0.7906050403854666,route_f,type_1,0.08192040159994673,low
+1,ELISA IPRO,1,71.4,19.4,46.8,98.2,2.1,3.8,162.09,1,closed,route_c,type_4,group_x,B07,1.0,route_f,type_1,0.0,low
+1,ELISA IPRO,2,78.0,16.6,42.8,83.0,1.94,4.0,157.75,1,closed,route_f,type_4,group_n,B07,0.15124620177367637,route_c,type_4,0.0,low
+1,ELISA IPRO,3,78.8,17.6,48.2,96.6,2.0,4.8,165.4,1,pending,route_f,type_4,group_x,B07,0.15935785686603934,route_f,type_1,1.0,low
+1,ELISA IPRO,4,76.07,17.87,45.93,92.6,2.01,4.2,173.0,1,closed,route_c,type_4,group_x,B07,0.9434748397446693,route_f,type_4,0.21241295543819205,low
+1,79I81RSF IPRO,1,70.0,17.8,64.0,144.6,2.26,5.0,180.08,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.8459248891277442,low
+1,79I81RSF IPRO,2,68.6,15.2,77.6,179.4,2.31,5.0,175.76,1,closed,route_f,type_4,group_n,B07,1.0,route_f,type_4,1.0,low
+1,79I81RSF IPRO,3,55.6,13.6,51.6,130.0,2.52,4.8,179.29,1,closed,route_f,type_4,group_x,A12,1.0,route_f,type_1,0.8496075319230165,low
+1,79I81RSF IPRO,4,64.73,15.53,64.4,151.33,2.36,4.93,184.67,1,closed,route_f,type_4,group_x,B07,0.9006247699470722,route_f,type_4,0.7601013596583794,low
+1,NEO 790 IPRO,1,53.0,17.4,33.0,86.2,2.61,5.6,135.76,1,closed,route_f,type_1,group_x,B07,0.9327694236269437,route_f,type_4,0.20934641188329267,low
+1,NEO 790 IPRO,2,55.2,18.0,34.8,78.8,2.26,5.0,147.81,1,closed,route_f,type_4,group_n,B07,0.9594392260790561,route_f,type_4,0.0,low
+1,NEO 790 IPRO,3,52.2,15.6,32.4,47.8,1.48,5.2,141.88,1,closed,route_f,type_4,group_x,B07,0.0,route_f,type_4,1.0,low
+1,NEO 790 IPRO,4,53.47,17.0,33.4,70.93,2.12,5.27,152.68,1,closed,route_f,type_4,group_x,B07,0.8820722506563226,route_f,type_1,0.0,low
+1,PAULA IPRO,1,65.6,15.8,48.8,94.0,1.93,4.8,156.96,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_1,0.957161812876193,high
+1,PAULA IPRO,2,72.2,17.2,48.4,90.4,1.87,3.6,158.45,0,pending,route_c,type_1,group_x,A12,0.0,route_f,type_4,1.0,high
+1,PAULA IPRO,3,68.6,16.2,39.4,92.0,2.34,3.8,149.2,1,closed,route_f,type_4,group_x,B07,0.04893994291023734,route_f,type_4,0.1176927594288361,low
+1,PAULA IPRO,4,68.8,16.4,45.53,92.13,2.04,4.07,148.87,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.0,high
+1,FTR 3179 IPRO,1,61.0,13.4,75.6,170.6,2.26,5.0,131.79,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,1.0,low
+1,FTR 3179 IPRO,2,66.6,15.0,60.0,130.8,2.18,4.8,135.47,1,closed,route_f,type_4,group_x,B07,0.0017722951848517918,route_f,type_4,1.0,low
+1,FTR 3179 IPRO,3,63.8,14.4,81.6,176.4,2.16,5.0,131.97,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.7456489044442223,low
+1,FTR 3179 IPRO,4,63.8,14.27,72.4,159.27,2.2,4.93,129.05,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.9656004170751028,low
+1,LAT 1330BT,1,55.2,14.8,46.0,106.4,2.31,4.4,207.43,1,closed,route_f,type_4,group_x,A12,1.0,route_c,type_4,1.0,low
+1,LAT 1330BT,2,55.0,10.8,51.2,118.6,2.32,3.4,202.79,1,closed,route_f,type_4,group_n,B07,1.0,route_f,type_1,1.0,low
+1,LAT 1330BT,3,51.0,15.8,32.6,66.2,2.03,2.8,216.0,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,1.0,low
+1,LAT 1330BT,4,53.73,13.8,43.27,97.07,2.22,3.53,195.2,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.0,low
+1,FTR 4280 IPRO,1,70.0,17.6,50.6,97.6,1.93,4.0,160.84,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,1.0,low
+1,FTR 4280 IPRO,2,65.2,16.8,61.4,112.4,1.83,5.2,155.94,1,closed,route_c,type_4,group_x,A12,0.048539113708630795,route_f,type_4,0.17229933303148653,low
+1,FTR 4280 IPRO,3,63.0,17.0,48.2,87.4,1.81,4.4,159.9,1,closed,route_f,type_4,group_x,B07,0.9618021767981303,route_f,type_4,0.14695586662204121,low
+1,FTR 4280 IPRO,4,66.07,17.13,53.4,99.13,1.86,4.53,157.55,1,closed,route_f,type_4,group_n,B07,1.0,route_f,type_4,0.15895324345930342,low
+1,ATAQUE I2X,1,71.2,16.4,42.2,61.0,1.45,3.6,130.45,1,closed,route_f,type_4,group_x,A12,0.2960561776211929,route_f,type_1,1.0,low
+1,ATAQUE I2X,2,69.2,17.0,54.4,130.8,2.4,3.8,141.36,1,closed,route_f,type_4,group_x,B07,0.9641724051723539,route_c,type_4,0.985336501386815,low
+1,ATAQUE I2X,3,67.4,16.8,36.8,91.6,2.49,2.8,142.13,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.8768055820794363,low
+1,ATAQUE I2X,4,69.27,16.73,44.47,94.47,2.11,3.4,140.28,1,closed,route_f,type_4,group_x,A12,0.16665571099020118,route_c,type_1,0.615668057503447,low
+1,SYN2282IPRO,1,56.2,13.2,43.6,98.2,2.25,2.8,183.46,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.06877745775945354,low
+1,SYN2282IPRO,2,59.6,15.4,51.6,122.6,2.38,3.6,171.56,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,1.0,low
+1,SYN2282IPRO,3,59.4,14.6,35.2,77.6,2.2,3.8,172.79,1,closed,route_c,type_4,group_n,B07,0.6842009968581495,route_f,type_4,0.11290910817202528,low
+1,SYN2282IPRO,4,58.4,14.4,43.47,99.47,2.28,3.4,181.22,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.729147402108189,low
+1,82I78RSF IPRO,1,58.4,15.4,28.8,70.0,2.43,2.6,150.08,1,closed,route_f,type_4,group_x,B07,0.7059196607324455,route_f,type_4,0.1306158795862997,low
+1,82I78RSF IPRO,2,61.4,15.2,48.8,123.8,2.54,4.2,148.17,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.4160453816607073,low
+1,82I78RSF IPRO,3,57.0,13.2,49.2,121.2,2.46,4.4,145.99,1,closed,route_f,type_4,group_x,B07,0.022455287933107027,route_f,type_1,1.0,low
+1,82I78RSF IPRO,4,58.93,14.6,42.27,105.0,2.48,3.73,145.5,1,closed,route_f,type_4,group_x,B07,0.13245680763303855,route_f,type_1,0.9875127728606755,low
+1,M 8644 IPRO,1,66.8,20.4,33.0,78.2,2.37,4.0,157.85,1,closed,route_f,type_1,group_x,B07,0.8804702741910108,route_f,type_1,1.0,low
+1,M 8644 IPRO,2,70.4,16.8,41.0,81.2,1.98,2.8,151.24,1,closed,route_f,type_4,group_x,B07,0.7942927597877428,route_c,type_4,1.0,low
+1,M 8644 IPRO,3,68.6,14.8,65.4,61.4,0.94,3.4,146.44,1,closed,route_f,type_4,group_x,A12,1.0,route_c,type_4,0.7927113282557721,low
+1,M 8644 IPRO,4,68.6,17.33,46.47,73.6,1.76,3.4,148.86,1,closed,route_f,type_4,group_x,B07,0.0,route_f,type_4,1.0,low
+1,MONSOY M8606I2X,1,63.4,14.4,63.6,150.6,2.37,2.2,162.9,1,closed,route_f,type_1,group_x,B07,0.9348708405341756,route_f,type_4,0.0,low
+1,MONSOY M8606I2X,2,66.4,14.6,56.6,129.6,2.29,2.6,161.98,0,pending,route_c,type_1,group_n,A12,0.0112176196970912,route_f,type_4,0.8892315440288885,high
+1,MONSOY M8606I2X,3,67.8,13.4,48.4,116.6,2.41,2.6,147.2,1,closed,route_f,type_1,group_n,B07,1.0,route_c,type_1,0.0,low
+1,MONSOY M8606I2X,4,65.87,14.13,56.2,132.27,2.36,2.47,155.75,0,pending,route_c,type_1,group_x,A12,0.11057463502640015,route_f,type_4,1.0,high
+1,NK 8770 IPRO,1,65.0,15.2,53.6,143.0,2.67,3.4,174.69,0,pending,route_c,type_1,group_n,A12,0.13905856527688976,route_c,type_1,0.3647005966394692,high
+1,NK 8770 IPRO,2,58.4,14.6,32.0,87.6,2.74,3.2,174.37,0,pending,route_c,type_1,group_n,A12,0.11182163813081962,route_f,type_1,0.09074878428690802,high
+1,NK 8770 IPRO,3,61.8,14.8,48.0,122.8,2.56,3.2,169.03,0,pending,route_c,type_1,group_n,A12,0.19602873406041557,route_c,type_1,0.0,high
+1,NK 8770 IPRO,4,61.73,14.87,44.53,117.8,2.65,3.27,179.82,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.5047796204942999,high
+1,FTR 4288 IPRO,1,63.6,14.8,52.2,117.8,2.26,4.2,151.9,0,pending,route_c,type_1,group_x,A12,0.0,route_f,type_4,0.0,high
+1,FTR 4288 IPRO,2,63.4,16.4,35.0,79.4,2.27,3.8,152.01,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.0,high
+1,FTR 4288 IPRO,3,60.4,15.4,44.6,131.2,2.94,3.6,150.72,0,pending,route_c,type_1,group_n,A12,0.1075549815745365,route_c,type_1,0.6405740334728078,high
+1,FTR 4288 IPRO,4,62.47,15.53,43.93,109.47,2.49,3.87,153.59,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_1,1.0,high
+1,FTR 3190 IPRO,1,64.6,13.4,33.4,70.4,2.11,2.8,157.09,0,pending,route_f,type_4,group_n,B07,0.0,route_c,type_1,0.19606973245518702,high
+1,FTR 3190 IPRO,2,67.2,13.4,39.0,59.4,1.52,2.8,157.14,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.48960562106358024,high
+1,FTR 3190 IPRO,3,70.2,12.8,35.6,81.0,2.28,2.8,159.08,0,pending,route_c,type_1,group_n,A12,0.1990188758692148,route_f,type_1,0.7186215211758296,high
+1,FTR 3190 IPRO,4,67.33,13.2,36.0,70.27,1.97,2.8,155.24,0,pending,route_c,type_1,group_n,A12,1.0,route_c,type_1,1.0,high
+2,NEO 760 CE,1,76.4,16.0,39.4,99.4,2.52,1.8,162.46,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+2,NEO 760 CE,2,80.6,14.6,70.0,174.0,2.49,3.0,169.6,1,closed,route_f,type_1,group_n,B07,1.0,route_c,type_4,1.0,low
+2,NEO 760 CE,3,65.2,13.2,50.0,126.4,2.53,4.0,150.7,1,closed,route_f,type_4,group_x,B07,0.9950644740368432,route_f,type_4,0.0,low
+2,NEO 760 CE,4,74.07,14.6,53.13,133.27,2.51,2.93,161.52,1,closed,route_f,type_4,group_n,A12,1.0,route_f,type_1,1.0,low
+2,MANU IPRO,1,76.4,16.0,39.4,99.4,2.52,1.8,165.59,1,closed,route_f,type_4,group_x,A12,0.8429630430794679,route_c,type_4,1.0,low
+2,MANU IPRO,2,80.6,14.6,70.0,174.0,2.49,3.0,169.38,1,closed,route_f,type_4,group_x,A12,0.7102964378155499,route_c,type_1,0.0,low
+2,MANU IPRO,3,65.2,13.2,50.0,126.4,2.53,4.0,165.17,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+2,MANU IPRO,4,74.07,14.6,53.13,133.27,2.51,2.93,162.17,1,closed,route_f,type_4,group_x,A12,1.0,route_c,type_4,0.0,low
+2,77HO111I2X - GUAPORÉ,1,48.0,10.2,24.8,48.0,1.94,1.4,186.65,0,pending,route_c,type_1,group_n,B07,0.16022755531636254,route_f,type_1,0.0,high
+2,77HO111I2X - GUAPORÉ,2,47.6,8.2,32.6,70.0,2.15,1.6,186.05,0,pending,route_c,type_1,group_n,A12,0.2082019956309137,route_c,type_1,0.0,high
+2,77HO111I2X - GUAPORÉ,3,48.4,10.8,26.0,51.4,1.98,1.6,183.34,0,pending,route_f,type_1,group_n,A12,0.20802479926236045,route_f,type_1,0.6248226080077187,high
+2,77HO111I2X - GUAPORÉ,4,48.0,9.73,27.8,56.47,2.02,1.53,180.22,0,pending,route_f,type_1,group_n,A12,0.0,route_c,type_4,0.17450609507618184,high
+2,NK 7777 IPRO,1,64.4,10.6,46.0,101.8,2.21,2.6,187.98,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_4,0.24129770687196966,high
+2,NK 7777 IPRO,2,73.0,10.8,44.0,96.0,2.18,2.2,196.12,0,pending,route_c,type_1,group_n,A12,0.06364429420428279,route_c,type_4,0.0,high
+2,NK 7777 IPRO,3,64.2,9.0,46.0,683.4,14.86,0.8,192.58,0,pending,route_c,type_1,group_n,A12,0.33547736980083853,route_f,type_1,1.0,high
+2,NK 7777 IPRO,4,67.2,10.13,45.33,293.73,6.42,1.87,187.95,0,pending,route_c,type_1,group_x,A12,0.19611314449209388,route_c,type_1,0.0,high
+2,GNS7900 IPRO - AMPLA,1,76.4,15.8,50.2,99.6,1.98,3.0,174.0,0,pending,route_c,type_1,group_n,A12,1.0,route_f,type_4,0.06647547732140867,high
+2,GNS7900 IPRO - AMPLA,2,81.6,20.2,49.4,102.2,2.07,1.6,185.41,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.0,high
+2,GNS7900 IPRO - AMPLA,3,80.2,19.2,60.0,135.4,1.15,4.6,185.39,0,pending,route_c,type_4,group_n,A12,0.882976048871946,route_c,type_1,0.8211064058922537,high
+2,GNS7900 IPRO - AMPLA,4,79.4,18.4,53.2,112.4,1.73,3.07,183.4,0,pending,route_c,type_1,group_n,A12,0.10453029454827924,route_c,type_1,0.21304516441980786,high
+2,LTT 7901 IPRO,1,77.0,18.2,56.6,169.6,3.0,4.4,179.43,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.0,high
+2,LTT 7901 IPRO,2,73.4,15.8,58.8,140.0,2.38,3.0,174.39,0,pending,route_c,type_1,group_n,A12,0.9684071834951099,route_f,type_4,0.4094770625478288,high
+2,LTT 7901 IPRO,3,83.8,15.4,44.0,134.0,3.05,2.6,169.32,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.009377767870813342,high
+2,LTT 7901 IPRO,4,78.07,16.47,53.13,147.87,2.81,3.33,171.97,0,pending,route_c,type_1,group_n,A12,0.21106085180877207,route_f,type_1,0.8124691968290253,high
+2,BRASMAX BÔNUS IPRO,1,74.2,17.2,42.8,107.0,2.5,1.8,213.24,1,closed,route_f,type_4,group_x,B07,0.9530026073578427,route_c,type_1,0.2484555274782776,low
+2,BRASMAX BÔNUS IPRO,2,78.2,9.8,43.2,67.2,1.56,2.4,206.95,1,closed,route_c,type_4,group_x,B07,0.6767994228891284,route_f,type_4,1.0,low
+2,BRASMAX BÔNUS IPRO,3,82.2,13.4,42.6,91.2,2.14,1.6,200.92,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+2,BRASMAX BÔNUS IPRO,4,78.2,13.47,42.87,88.47,2.07,1.93,209.8,1,closed,route_f,type_4,group_x,B07,0.9073796044637298,route_c,type_4,0.24109663747075352,low
+2,97Y97 IPRO,1,77.8,17.0,49.8,86.6,1.74,4.0,172.2,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.8678087504962266,low
+2,97Y97 IPRO,2,77.2,17.4,42.2,95.0,2.25,2.8,173.8,1,closed,route_f,type_4,group_x,A12,0.9885116271384187,route_f,type_4,0.9742312049304793,low
+2,97Y97 IPRO,3,79.2,17.6,43.4,78.8,1.82,4.2,193.33,1,closed,route_f,type_1,group_x,B07,0.9637342205541457,route_f,type_1,0.0,low
+2,97Y97 IPRO,4,78.07,17.33,45.13,86.8,1.94,3.67,176.2,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.0,low
+2,BRASMAX OLIMPO IPRO,1,66.6,13.2,38.0,84.4,2.22,3.6,200.86,0,pending,route_c,type_4,group_x,A12,0.0,route_c,type_1,0.0,high
+2,BRASMAX OLIMPO IPRO,2,75.4,15.0,45.0,113.4,2.52,3.0,194.93,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.2706168402200569,high
+2,BRASMAX OLIMPO IPRO,3,83.8,14.4,38.0,87.4,2.3,2.2,191.06,0,pending,route_c,type_1,group_n,A12,1.0,route_c,type_4,1.0,high
+2,BRASMAX OLIMPO IPRO,4,75.27,14.2,40.33,95.07,2.35,2.93,191.75,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_4,0.0,high
+2,LYNDA IPRO,1,68.0,17.4,48.6,115.6,2.38,4.0,198.28,1,closed,route_f,type_1,group_x,B07,0.7868331110217287,route_c,type_4,0.6849425191378506,low
+2,LYNDA IPRO,2,62.6,13.2,43.2,77.2,1.79,3.6,204.0,1,closed,route_f,type_1,group_x,B07,0.0885835829815175,route_c,type_4,1.0,low
+2,LYNDA IPRO,3,60.4,13.4,47.0,80.4,1.71,3.8,193.68,1,pending,route_f,type_4,group_x,B07,0.1488100385335039,route_c,type_4,0.9817104004233361,low
+2,LYNDA IPRO,4,63.67,14.67,46.27,91.07,1.96,3.8,201.86,1,closed,route_f,type_4,group_x,B07,0.9940381349873016,route_f,type_1,0.8688994333454225,low
+2,NK 8100 IPRO,1,74.8,21.2,84.2,167.0,1.98,5.4,199.54,1,closed,route_c,type_1,group_x,B07,0.7401879582027869,route_f,type_1,0.9445166676083568,low
+2,NK 8100 IPRO,2,71.6,14.4,110.0,180.0,2.35,9.0,196.21,1,closed,route_f,type_4,group_n,B07,0.09354099143759315,route_f,type_4,0.0,low
+2,NK 8100 IPRO,3,77.2,18.6,100.4,161.2,1.61,5.8,203.73,0,pending,route_c,type_1,group_n,B07,0.0,route_c,type_1,0.28817676777610296,high
+2,NK 8100 IPRO,4,74.53,18.07,98.2,169.4,1.98,6.73,199.71,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.0,low
+2,82HO111 IPRO - HO COXIM IPRO,1,69.8,13.0,123.0,281.8,2.29,3.8,189.92,1,pending,route_c,type_4,group_n,A12,0.0,route_f,type_1,0.27689880936703043,high
+2,82HO111 IPRO - HO COXIM IPRO,2,66.8,15.4,100.0,102.2,1.55,5.0,197.06,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_1,1.0,high
+2,82HO111 IPRO - HO COXIM IPRO,3,69.4,13.4,114.0,266.0,2.33,5.0,202.59,0,pending,route_c,type_1,group_n,B07,0.0,route_c,type_1,0.28948022485010905,high
+2,82HO111 IPRO - HO COXIM IPRO,4,68.67,13.93,112.33,216.67,2.06,4.6,201.31,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,1.0,high
+2,83IX84RSF I2X,1,80.0,18.6,49.8,74.6,1.5,3.4,162.9,0,pending,route_c,type_1,group_n,A12,0.9146424068237956,route_c,type_1,1.0,high
+2,83IX84RSF I2X,2,83.6,17.8,45.0,64.0,1.42,3.6,170.42,0,pending,route_c,type_4,group_n,B07,1.0,route_c,type_4,1.0,high
+2,83IX84RSF I2X,3,81.8,16.0,42.0,53.0,1.26,3.4,161.74,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_4,0.12621644091602408,high
+2,83IX84RSF I2X,4,81.8,17.47,45.6,63.87,1.39,3.47,164.87,0,pending,route_c,type_1,group_n,A12,0.12987529049651642,route_c,type_1,0.07045673162949889,high
+2,ADAPTA LTT 8402 IPRO,1,58.6,9.8,55.6,117.6,2.12,3.2,180.93,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.0,low
+2,ADAPTA LTT 8402 IPRO,2,58.2,9.8,55.4,129.2,2.33,2.4,179.21,1,closed,route_f,type_4,group_x,B07,0.9075736701259892,route_c,type_1,1.0,low
+2,ADAPTA LTT 8402 IPRO,3,61.6,11.8,48.0,123.8,2.58,3.2,181.4,1,pending,route_f,type_4,group_x,B07,0.8852629653922222,route_c,type_4,0.8163452605180801,low
+2,ADAPTA LTT 8402 IPRO,4,59.47,10.47,53.0,123.53,2.34,2.93,173.3,1,closed,route_f,type_4,group_x,B07,0.7817067403762143,route_c,type_1,0.0008722975744898376,low
+2,98R30 CE,1,69.8,12.4,103.2,264.6,2.56,4.0,182.0,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,1.0,low
+2,98R30 CE,2,75.8,14.4,85.2,214.6,2.52,3.4,184.42,1,closed,route_f,type_4,group_x,B07,0.9530171499891951,route_f,type_4,1.0,low
+2,98R30 CE,3,72.6,16.2,80.0,80.4,2.09,2.8,183.11,1,closed,route_f,type_4,group_x,B07,0.6856840925315844,route_c,type_4,0.0,low
+2,98R30 CE,4,72.73,14.33,89.47,186.53,2.39,3.4,175.96,1,closed,route_f,type_4,group_x,B07,0.9290177793580545,route_f,type_4,1.0,low
+2,FORTALEZA IPRO,1,62.8,13.2,42.0,88.4,2.1,3.6,137.6,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.9658093764963993,high
+2,FORTALEZA IPRO,2,70.0,12.6,58.0,137.8,2.38,4.2,127.76,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,0.6796546152188254,low
+2,FORTALEZA IPRO,3,65.4,12.2,57.4,108.4,1.89,5.6,130.46,1,closed,route_f,type_1,group_x,B07,0.7743818339241364,route_f,type_1,1.0,low
+2,FORTALEZA IPRO,4,66.07,12.67,52.47,111.53,2.12,4.47,132.81,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.0,high
+2,MONSOY 8330I2X,1,59.4,12.2,56.8,138.6,2.44,3.6,148.42,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.6487868831040976,low
+2,MONSOY 8330I2X,2,61.4,11.6,56.2,115.6,2.06,4.2,158.09,0,pending,route_c,type_1,group_n,B07,0.17977111836397514,route_f,type_4,0.027716847439600453,high
+2,MONSOY 8330I2X,3,61.4,10.8,72.0,159.0,2.21,3.8,158.53,0,pending,route_c,type_1,group_n,A12,0.9012897606188525,route_c,type_1,0.0987963767589622,high
+2,MONSOY 8330I2X,4,60.73,11.53,61.67,137.73,2.24,3.87,158.78,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,1.0,high
+2,SUZY IPRO,1,63.8,11.6,58.0,104.2,1.8,2.6,154.26,0,pending,route_c,type_4,group_n,A12,0.08165119004331395,route_c,type_1,1.0,high
+2,SUZY IPRO,2,74.2,16.8,57.4,99.6,1.74,4.0,149.29,0,pending,route_c,type_1,group_n,A12,0.6916592769047464,route_c,type_1,0.0,high
+2,SUZY IPRO,3,73.6,15.2,50.6,87.2,1.72,2.4,154.03,0,pending,route_c,type_1,group_x,A12,0.0,route_c,type_4,0.7243940720987374,high
+2,SUZY IPRO,4,70.53,14.53,55.33,97.0,1.75,3.0,155.77,0,pending,route_c,type_1,group_n,A12,0.9628028243872807,route_c,type_1,1.0,high
+2,TMG 22X83I2X,1,65.2,12.8,75.2,105.0,2.48,4.0,184.11,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.0,low
+2,TMG 22X83I2X,2,66.2,11.2,53.0,86.0,1.62,3.2,184.17,1,closed,route_f,type_4,group_x,B07,0.942265763317907,route_f,type_1,1.0,low
+2,TMG 22X83I2X,3,55.4,9.0,82.0,114.4,1.4,3.2,182.95,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.0,low
+2,TMG 22X83I2X,4,62.27,11.0,70.07,101.8,1.83,3.47,183.13,0,pending,route_c,type_1,group_n,B07,0.15022707861473159,route_c,type_4,1.0,high
+2,EXPANDE LTT 8301 IPRO,1,62.0,10.2,58.0,132.0,2.28,3.4,186.24,0,pending,route_c,type_1,group_x,B07,1.0,route_f,type_4,0.8717660240395972,high
+2,EXPANDE LTT 8301 IPRO,2,68.4,14.4,67.2,151.0,2.25,3.4,182.05,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.11371208381047807,high
+2,EXPANDE LTT 8301 IPRO,3,67.0,17.4,58.0,125.6,2.17,3.4,180.33,1,pending,route_c,type_1,group_n,A12,0.0,route_f,type_4,0.027696758756631558,high
+2,EXPANDE LTT 8301 IPRO,4,65.8,14.0,61.07,136.2,2.23,3.4,189.46,0,pending,route_c,type_1,group_n,A12,1.0,route_f,type_4,0.9092213208370427,high
+2,FORTALECE L090183 RR,1,61.8,12.2,37.6,69.4,1.85,0.4,165.68,1,closed,route_f,type_4,group_x,A12,0.7983085960371357,route_c,type_4,0.7873401457646562,low
+2,FORTALECE L090183 RR,2,63.0,16.8,45.8,112.4,2.45,2.0,157.15,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,1.0,low
+2,FORTALECE L090183 RR,3,61.6,16.8,50.0,121.4,1.2,2.2,162.17,1,closed,route_f,type_4,group_x,B07,0.8650731919621333,route_c,type_4,0.0,low
+2,FORTALECE L090183 RR,4,62.13,15.27,44.47,101.07,1.83,1.53,158.04,0,pending,route_c,type_1,group_n,A12,0.013577588641168268,route_f,type_1,0.08656491102946978,high
+2,96R29 IPRO,1,66.2,16.0,46.6,100.8,2.16,2.4,152.78,1,closed,route_f,type_1,group_x,B07,0.9678529762194636,route_c,type_4,1.0,low
+2,96R29 IPRO,2,59.2,16.0,34.4,88.2,2.56,3.0,164.61,1,closed,route_f,type_1,group_x,B07,0.8730634629070871,route_f,type_4,1.0,low
+2,96R29 IPRO,3,65.0,12.8,57.4,138.0,2.4,3.2,167.22,1,closed,route_f,type_4,group_x,B07,0.8697389945852785,route_f,type_1,0.14546544709606796,low
+2,96R29 IPRO,4,63.47,14.93,46.13,109.0,2.38,2.87,157.2,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.0,low
+2,74K75RSF CE,1,70.4,14.0,50.4,118.4,2.35,4.4,162.2,0,pending,route_c,type_1,group_x,A12,0.13190896098155538,route_f,type_1,0.0,high
+2,74K75RSF CE,2,82.2,14.4,44.0,97.4,2.21,2.8,168.01,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.0,high
+2,74K75RSF CE,3,74.0,15.4,66.4,111.0,1.67,4.0,174.2,0,pending,route_c,type_1,group_n,A12,0.00928999353215117,route_f,type_1,0.2597655533607995,high
+2,74K75RSF CE,4,75.53,14.6,53.6,108.93,2.08,3.73,176.96,0,pending,route_c,type_1,group_x,A12,0.07568056378356375,route_c,type_4,0.0,high
+2,FTR 3868 IPRO,1,82.0,18.2,36.6,93.0,2.54,2.4,163.69,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.8584014501217806,high
+2,FTR 3868 IPRO,2,77.4,15.8,36.0,86.4,2.4,1.8,164.92,0,pending,route_c,type_1,group_n,A12,0.0980092573647123,route_c,type_1,0.0,high
+2,FTR 3868 IPRO,3,72.4,15.2,43.2,89.4,2.07,3.0,163.33,0,pending,route_c,type_1,group_x,A12,0.10856296036041647,route_f,type_4,0.0,high
+2,FTR 3868 IPRO,4,77.27,16.4,38.6,89.6,2.34,2.4,157.72,0,pending,route_c,type_1,group_n,A12,0.3449804845844293,route_c,type_4,0.0,high
+2,GNS7700 IPRO,1,79.8,13.6,61.8,166.0,2.69,2.8,162.02,1,closed,route_f,type_4,group_x,B07,0.9501661947508554,route_c,type_4,0.0,low
+2,GNS7700 IPRO,2,70.6,21.8,43.6,122.8,2.82,2.0,162.85,1,closed,route_f,type_4,group_x,B07,0.9393041612789731,route_f,type_1,0.0,low
+2,GNS7700 IPRO,3,75.0,15.0,47.0,98.0,2.09,2.2,168.54,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.8499437375947738,low
+2,GNS7700 IPRO,4,75.13,16.8,50.8,128.93,2.53,2.33,171.37,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,0.8418088172052313,low
+2,ELISA IPRO,1,67.0,13.6,53.2,165.0,3.1,3.8,178.0,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_1,0.10577794330147988,high
+2,ELISA IPRO,2,70.6,19.4,42.6,99.0,2.32,3.4,175.4,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.9529945476746902,high
+2,ELISA IPRO,3,74.8,14.0,36.0,83.0,2.31,3.0,173.6,0,pending,route_c,type_1,group_n,A12,0.07169983606389035,route_c,type_1,0.9638391765014946,high
+2,ELISA IPRO,4,70.8,15.67,43.93,115.67,2.58,3.4,177.4,0,pending,route_c,type_1,group_n,A12,0.8903450881026573,route_c,type_4,0.12088154420504885,high
+2,79I81RSF IPRO,1,69.0,9.6,62.8,140.0,2.23,3.0,201.3,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_4,0.0,high
+2,79I81RSF IPRO,2,64.4,8.4,61.8,159.0,2.57,2.2,196.72,0,pending,route_c,type_1,group_n,A12,0.011871041676317591,route_c,type_1,0.0,high
+2,79I81RSF IPRO,3,68.6,11.0,61.4,157.0,2.56,3.4,198.38,0,pending,route_c,type_1,group_n,A12,0.1319618757389492,route_c,type_1,0.09526619700295959,high
+2,79I81RSF IPRO,4,67.33,9.67,62.0,152.0,2.45,2.87,193.0,0,pending,route_c,type_1,group_n,A12,0.0,route_c,type_4,0.13531006332042028,high
+2,NEO 790 IPRO,1,64.0,11.4,75.6,241.0,3.19,4.6,189.85,1,closed,route_f,type_4,group_x,B07,0.7558840587809359,route_f,type_1,0.9702176163495076,low
+2,NEO 790 IPRO,2,64.0,15.4,50.4,121.2,2.4,4.0,192.48,1,closed,route_f,type_1,group_x,B07,0.7460508355538371,route_f,type_1,1.0,low
+2,NEO 790 IPRO,3,63.6,17.0,87.2,215.6,2.47,4.6,190.0,0,pending,route_c,type_1,group_x,A12,0.8331277686614373,route_c,type_4,0.0,high
+2,NEO 790 IPRO,4,63.87,14.6,71.07,192.6,2.69,4.4,193.04,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_4,0.0,high
+2,PAULA IPRO,1,73.0,10.4,87.6,181.8,2.08,4.0,184.2,1,closed,route_f,type_4,group_x,B07,0.9795140744828621,route_f,type_4,1.0,low
+2,PAULA IPRO,2,78.2,11.6,76.0,105.8,1.39,4.0,185.66,0,pending,route_c,type_1,group_n,A12,0.8424733796483174,route_f,type_4,0.0901007676652859,high
+2,PAULA IPRO,3,66.4,9.6,69.6,123.2,1.77,3.0,180.83,0,closed,route_c,type_1,group_n,A12,0.0,route_c,type_1,0.09219793377935664,high
+2,PAULA IPRO,4,72.53,10.53,77.73,136.93,1.75,3.67,185.47,1,closed,route_f,type_1,group_x,B07,0.8974336202398784,route_f,type_4,1.0,low
+2,FTR 3179 IPRO,1,75.4,13.6,53.2,100.4,1.89,1.8,156.6,1,closed,route_f,type_4,group_x,B07,0.0,route_f,type_1,1.0,low
+2,FTR 3179 IPRO,2,74.2,11.4,53.0,93.6,1.77,2.0,143.24,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_4,1.0,low
+2,FTR 3179 IPRO,3,74.4,13.6,48.4,94.6,1.95,2.0,142.2,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_4,1.0,low
+2,FTR 3179 IPRO,4,74.67,12.87,51.53,96.2,1.87,1.93,145.3,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,1.0,low
+2,LAT 1330BT,1,76.4,12.2,37.6,91.8,2.44,2.0,190.98,1,closed,route_f,type_4,group_x,B07,0.0,route_c,type_1,0.9795924720209377,low
+2,LAT 1330BT,2,63.6,19.8,63.0,139.4,2.21,2.4,200.04,1,closed,route_f,type_4,group_x,B07,0.9425966729974496,route_c,type_1,1.0,low
+2,LAT 1330BT,3,66.6,12.6,34.4,78.4,2.28,1.6,211.24,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.046263288050795034,low
+2,LAT 1330BT,4,68.87,14.87,45.0,103.2,2.31,2.0,208.97,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,1.0,low
+2,FTR 4280 IPRO,1,67.0,12.2,55.2,89.6,1.62,5.4,179.42,1,closed,route_f,type_4,group_x,B07,0.8797406804416704,route_f,type_4,1.0,low
+2,FTR 4280 IPRO,2,67.4,13.8,70.0,160.4,2.29,3.8,180.25,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_4,0.05001885826554525,low
+2,FTR 4280 IPRO,3,64.4,13.4,47.2,82.6,1.75,3.4,186.33,1,closed,route_f,type_4,group_n,A12,0.7308104071521488,route_f,type_4,0.8510102219743103,low
+2,FTR 4280 IPRO,4,66.27,13.13,57.47,110.87,1.89,4.2,177.21,1,closed,route_f,type_4,group_n,B07,1.0,route_c,type_4,1.0,low
+2,ATAQUE I2X,1,80.8,21.0,81.4,173.8,2.14,5.6,152.05,0,pending,route_c,type_1,group_n,A12,0.10098477455952591,route_c,type_1,1.0,high
+2,ATAQUE I2X,2,63.4,21.2,51.6,103.0,2.0,3.6,155.08,0,pending,route_c,type_1,group_n,A12,0.962890906938284,route_c,type_4,0.0,high
+2,ATAQUE I2X,3,69.6,19.6,77.0,205.6,2.67,5.4,161.59,0,pending,route_c,type_4,group_n,A12,0.24068982698856398,route_c,type_1,0.014376429873552001,high
+2,ATAQUE I2X,4,71.27,20.6,70.0,160.8,2.27,4.87,166.22,0,pending,route_c,type_4,group_n,A12,0.0,route_c,type_1,0.0,high
+2,SYN2282IPRO,1,63.0,16.2,79.4,182.4,2.3,4.0,205.57,0,pending,route_c,type_4,group_n,A12,0.02881085502768212,route_c,type_4,0.0,high
+2,SYN2282IPRO,2,66.6,18.6,60.0,121.4,2.02,3.8,194.94,0,pending,route_c,type_1,group_n,B07,0.0,route_c,type_1,0.3127510193190312,high
+2,SYN2282IPRO,3,64.2,18.4,70.4,125.2,1.78,3.6,204.17,0,pending,route_c,type_4,group_x,A12,0.0,route_c,type_1,0.0,high
+2,SYN2282IPRO,4,64.6,17.73,69.93,143.0,2.03,3.8,204.89,0,pending,route_c,type_1,group_n,A12,0.9848523127393709,route_c,type_4,0.0,high
+2,82I78RSF IPRO,1,86.8,19.0,106.4,191.6,1.8,3.6,171.6,1,closed,route_f,type_4,group_x,B07,0.014191416476254997,route_c,type_4,0.0,low
+2,82I78RSF IPRO,2,87.2,19.4,92.8,201.0,2.17,5.0,172.59,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_1,0.8465836257801949,low
+2,82I78RSF IPRO,3,87.8,24.2,79.6,146.0,1.83,4.8,169.62,1,closed,route_f,type_4,group_x,A12,1.0,route_f,type_1,0.6540490216769471,low
+2,82I78RSF IPRO,4,87.27,20.87,92.93,179.53,1.93,4.47,162.59,0,pending,route_c,type_1,group_n,B07,0.0,route_f,type_4,0.1279404515904156,high
+2,M 8644 IPRO,1,63.6,12.2,32.0,80.8,2.53,3.2,159.15,1,closed,route_f,type_1,group_x,B07,1.0,route_f,type_4,1.0,low
+2,M 8644 IPRO,2,60.8,11.0,43.2,104.2,2.41,3.0,164.86,1,closed,route_f,type_4,group_x,A12,0.9070158796196514,route_f,type_4,0.9257475442857692,low
+2,M 8644 IPRO,3,61.4,9.2,34.0,85.4,2.51,2.8,163.72,1,closed,route_f,type_4,group_x,B07,1.0,route_f,type_1,0.662481518569477,low
+2,M 8644 IPRO,4,61.93,10.8,36.4,90.13,2.48,3.0,157.93,1,closed,route_f,type_4,group_x,B07,0.8990361230929238,route_c,type_1,0.18224993204702097,low
+2,MONSOY M8606I2X,1,78.2,8.0,81.4,249.8,3.07,4.8,150.53,0,pending,route_c,type_1,group_n,A12,0.14451244153167753,route_c,type_4,0.0,high
+2,MONSOY M8606I2X,2,63.0,7.2,109.4,440.0,4.02,4.4,150.82,0,pending,route_c,type_1,group_n,A12,0.2929099162546043,route_c,type_4,0.2631177534370919,high
+2,MONSOY M8606I2X,3,67.2,8.6,102.0,209.0,2.05,4.0,153.97,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.0,high
+2,MONSOY M8606I2X,4,69.47,7.93,97.6,299.6,3.05,4.4,154.1,0,pending,route_c,type_1,group_n,B07,0.7094879874680183,route_f,type_1,0.0,high
+2,NK 8770 IPRO,1,89.8,15.6,97.6,208.0,2.13,3.2,173.64,1,closed,route_f,type_4,group_x,B07,0.0,route_c,type_4,0.9639635949614985,low
+2,NK 8770 IPRO,2,87.6,15.0,55.0,104.0,1.89,2.2,175.92,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_4,1.0,low
+2,NK 8770 IPRO,3,91.4,18.2,60.2,141.4,2.35,3.6,166.68,1,closed,route_f,type_4,group_x,A12,1.0,route_c,type_4,0.9539473222719795,low
+2,NK 8770 IPRO,4,89.6,16.27,70.93,151.13,2.12,3.0,160.81,1,closed,route_f,type_4,group_n,B07,1.0,route_f,type_1,0.0,low
+2,FTR 4288 IPRO,1,82.6,16.0,84.0,147.2,1.75,3.6,146.98,0,pending,route_c,type_1,group_n,A12,1.0,route_c,type_4,0.0,high
+2,FTR 4288 IPRO,2,87.6,15.8,79.2,151.8,1.92,3.8,139.22,0,pending,route_c,type_1,group_n,A12,0.06419008070041592,route_f,type_1,0.0,high
+2,FTR 4288 IPRO,3,94.8,17.2,64.0,118.0,1.84,3.6,135.65,1,closed,route_f,type_1,group_x,B07,1.0,route_c,type_4,1.0,low
+2,FTR 4288 IPRO,4,88.33,16.33,75.73,139.0,1.84,3.67,135.19,1,closed,route_f,type_4,group_x,B07,1.0,route_c,type_4,0.6381878647464057,low
+2,FTR 3190 IPRO,1,64.4,16.6,76.0,168.0,2.21,3.6,145.69,0,pending,route_c,type_1,group_n,A12,1.0,route_c,type_1,0.9100654054909831,high
+2,FTR 3190 IPRO,2,64.6,17.6,116.8,271.2,2.32,3.8,147.24,0,pending,route_c,type_4,group_n,A12,0.0475404811175787,route_f,type_1,0.1537755047882255,high
+2,FTR 3190 IPRO,3,58.8,14.8,86.4,180.6,2.09,2.2,156.32,0,pending,route_c,type_1,group_n,A12,0.119946870697949,route_c,type_1,0.061367277293875144,high
+2,FTR 3190 IPRO,4,62.6,16.33,93.07,206.6,2.21,3.2,157.61,0,pending,route_c,type_1,group_n,A12,0.0,route_f,type_1,0.11953991602974402,high

@@ -12,7 +12,7 @@ from pandas.errors import EmptyDataError
 import seaborn as sns
 
 
-METHOD_ORDER = ["TFS-RF", "TFS-LogReg", "TFS-LASSO", "LASFS"]
+METHOD_ORDER = ["TFS-RF", "TFS-LogReg", "TFS-LASSO", "LLM-only", "LASFS"]
 ABLATION_ORDER = [
     "LASFS-full",
     "LASFS-w/o-leakage",
@@ -23,6 +23,7 @@ METHOD_PALETTE = {
     "TFS-RF": "#D55E00",
     "TFS-LogReg": "#0072B2",
     "TFS-LASSO": "#CC79A7",
+    "LLM-only": "#E69F00",
     "LASFS": "#009E73",
 }
 ABLATION_PALETTE = {
@@ -49,6 +50,14 @@ def parse_args() -> argparse.Namespace:
         help="Output directory for PNG figures. Defaults to results/figures.",
     )
     parser.add_argument(
+        "--pdfs-dir",
+        default=None,
+        help=(
+            "Output directory for PDF figures. Defaults to a pdfs directory next "
+            "to the figures directory."
+        ),
+    )
+    parser.add_argument(
         "--include-synthetic",
         action="store_true",
         help="Include the synthetic debugging dataset in paper artifacts.",
@@ -62,8 +71,10 @@ def main() -> None:
     results_dir = Path(args.results_dir)
     tables_dir = Path(args.tables_dir) if args.tables_dir else results_dir / "paper_tables"
     figures_dir = Path(args.figures_dir) if args.figures_dir else results_dir / "figures"
+    pdfs_dir = Path(args.pdfs_dir) if args.pdfs_dir else figures_dir.parent / "pdfs"
     tables_dir.mkdir(parents=True, exist_ok=True)
     figures_dir.mkdir(parents=True, exist_ok=True)
+    pdfs_dir.mkdir(parents=True, exist_ok=True)
 
     main_results = load_main_results(results_dir, include_synthetic=args.include_synthetic)
     ablation_results = load_ablation_results(results_dir, include_synthetic=args.include_synthetic)
@@ -80,14 +91,15 @@ def main() -> None:
     if not ablation_results.empty:
         write_ablation_tables(ablation_results, tables_dir)
     write_reproducibility_metadata(main_results if not main_results.empty else ablation_results, tables_dir)
-    write_table_pngs(tables_dir, figures_dir, dpi=args.dpi)
+    write_table_pngs(tables_dir, figures_dir, pdfs_dir, dpi=args.dpi)
     if not main_results.empty:
-        write_figures(main_results, figures_dir, dpi=args.dpi)
+        write_figures(main_results, figures_dir, pdfs_dir, dpi=args.dpi)
     if not ablation_results.empty:
-        write_ablation_figures(ablation_results, figures_dir, dpi=args.dpi)
+        write_ablation_figures(ablation_results, figures_dir, pdfs_dir, dpi=args.dpi)
 
     print(f"Wrote paper tables to: {tables_dir.resolve()}")
     print(f"Wrote figures to: {figures_dir.resolve()}")
+    print(f"Wrote PDF figures to: {pdfs_dir.resolve()}")
 
 
 def load_main_results(results_dir: Path, include_synthetic: bool) -> pd.DataFrame:
@@ -141,7 +153,12 @@ def load_semantic_scores(results_dir: Path, include_synthetic: bool) -> pd.DataF
         frames.append(frame)
     if not frames:
         return pd.DataFrame()
-    return pd.concat(frames, ignore_index=True).sort_values(["dataset", "feature", "prompt_variant"])
+    out = pd.concat(frames, ignore_index=True)
+    sort_columns = ["dataset", "feature", "prompt_variant"]
+    for column in ["scoring_role", "provider", "model"]:
+        if column in out:
+            sort_columns.append(column)
+    return out.sort_values(sort_columns)
 
 
 def write_summary_tables(
@@ -202,8 +219,14 @@ def write_summary_tables(
         frequency.to_csv(tables_dir / "table_selected_feature_frequency.csv", index=False)
 
     if not semantic_scores.empty:
+        semantic_group_columns = ["dataset", "feature"]
+        semantic_group_columns.extend(
+            column
+            for column in ["scoring_role", "provider", "model"]
+            if column in semantic_scores
+        )
         semantic_summary = (
-            semantic_scores.groupby(["dataset", "feature"], observed=True)
+            semantic_scores.groupby(semantic_group_columns, observed=True)
             .agg(
                 semantic_relevance_mean=("semantic_relevance", "mean"),
                 availability_mean=("prediction_time_availability", "mean"),
@@ -216,7 +239,12 @@ def write_summary_tables(
         )
         semantic_summary.to_csv(tables_dir / "table_semantic_risk_summary.csv", index=False)
         if not selected_features.empty:
-            case_study = build_case_study_table(selected_features, semantic_summary)
+            case_study_semantic = semantic_summary
+            if "scoring_role" in case_study_semantic:
+                case_study_semantic = case_study_semantic[
+                    case_study_semantic["scoring_role"] == "lasfs"
+                ]
+            case_study = build_case_study_table(selected_features, case_study_semantic)
             case_study.to_csv(tables_dir / "table_case_study_leakage_rejections.csv", index=False)
 
 
@@ -324,6 +352,17 @@ def write_reproducibility_metadata(main_results: pd.DataFrame, tables_dir: Path)
         "seeds": ";".join(str(seed) for seed in sorted(main_results["seed"].unique())),
         "n_rows": len(main_results),
     }
+    if {"method", "llm_provider", "llm_model"}.issubset(main_results.columns):
+        assignments = (
+            main_results[main_results["llm_provider"] != "none"]
+            .loc[:, ["method", "llm_provider", "llm_model"]]
+            .drop_duplicates()
+            .sort_values("method")
+        )
+        row["llm_assignments"] = ";".join(
+            f"{item.method}={item.llm_provider}/{item.llm_model}"
+            for item in assignments.itertuples(index=False)
+        )
     for package in packages:
         key = package.lower().replace("-", "_")
         try:
@@ -359,7 +398,7 @@ def paired_delta_table(main_results: pd.DataFrame) -> pd.DataFrame:
     ]
     rows = []
     for dataset, frame in main_results.groupby("dataset", observed=True):
-        for baseline in ["TFS-RF", "TFS-LogReg", "TFS-LASSO"]:
+        for baseline in ["TFS-RF", "TFS-LogReg", "TFS-LASSO", "LLM-only"]:
             for metric in metrics:
                 wide = frame.pivot(index="seed", columns="method", values=metric)
                 if "LASFS" not in wide or baseline not in wide:
@@ -378,7 +417,7 @@ def paired_delta_table(main_results: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def write_table_pngs(tables_dir: Path, figures_dir: Path, dpi: int) -> None:
+def write_table_pngs(tables_dir: Path, figures_dir: Path, pdfs_dir: Path, dpi: int) -> None:
     table_specs = [
         (
             "table_clean_performance_formatted.csv",
@@ -426,10 +465,10 @@ def write_table_pngs(tables_dir: Path, figures_dir: Path, dpi: int) -> None:
             for col in ["mean_delta", "std_delta"]:
                 if col in frame:
                     frame[col] = frame[col].map(lambda value: f"{value:.3f}")
-        render_table_png(frame, figures_dir / png_name, title=title, dpi=dpi)
+        render_table_png(frame, figures_dir / png_name, pdfs_dir, title=title, dpi=dpi)
 
 
-def write_figures(main_results: pd.DataFrame, figures_dir: Path, dpi: int) -> None:
+def write_figures(main_results: pd.DataFrame, figures_dir: Path, pdfs_dir: Path, dpi: int) -> None:
     sns.set_theme(style="whitegrid", context="paper", font_scale=0.9)
     bar_metric(
         main_results,
@@ -437,6 +476,7 @@ def write_figures(main_results: pd.DataFrame, figures_dir: Path, dpi: int) -> No
         ylabel="Deployment Drop (AUROC)",
         title="Deployment Degradation under Clean Test",
         path=figures_dir / "fig_deployment_drop.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
     )
     bar_metric(
@@ -445,6 +485,7 @@ def write_figures(main_results: pd.DataFrame, figures_dir: Path, dpi: int) -> No
         ylabel="Injected Leakage Recall",
         title="Injected Leakage Features Selected",
         path=figures_dir / "fig_injected_leakage_recall.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
     )
     bar_metric(
@@ -453,6 +494,7 @@ def write_figures(main_results: pd.DataFrame, figures_dir: Path, dpi: int) -> No
         ylabel="Selected Leakage Ratio",
         title="Leakage Ratio among Selected Features",
         path=figures_dir / "fig_selected_leakage_ratio.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
     )
     bar_metric(
@@ -461,6 +503,7 @@ def write_figures(main_results: pd.DataFrame, figures_dir: Path, dpi: int) -> No
         ylabel="Clean AUROC",
         title="Clean Deployment AUROC",
         path=figures_dir / "fig_clean_auroc.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
         ylim=(0, 1),
     )
@@ -470,13 +513,24 @@ def write_figures(main_results: pd.DataFrame, figures_dir: Path, dpi: int) -> No
         ylabel="Clean F1",
         title="Clean Deployment F1",
         path=figures_dir / "fig_clean_f1.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
         ylim=(0, 1),
     )
-    leaky_vs_clean_plot(main_results, figures_dir / "fig_leaky_vs_clean_auroc.png", dpi=dpi)
+    leaky_vs_clean_plot(
+        main_results,
+        figures_dir / "fig_leaky_vs_clean_auroc.png",
+        pdfs_dir,
+        dpi=dpi,
+    )
 
 
-def write_ablation_figures(ablation_results: pd.DataFrame, figures_dir: Path, dpi: int) -> None:
+def write_ablation_figures(
+    ablation_results: pd.DataFrame,
+    figures_dir: Path,
+    pdfs_dir: Path,
+    dpi: int,
+) -> None:
     sns.set_theme(style="whitegrid", context="paper", font_scale=0.9)
     bar_metric(
         ablation_results,
@@ -484,6 +538,7 @@ def write_ablation_figures(ablation_results: pd.DataFrame, figures_dir: Path, dp
         ylabel="Deployment Drop (AUROC)",
         title="Ablation: Deployment Drop",
         path=figures_dir / "fig_ablation_deployment_drop.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
         order=ABLATION_ORDER,
         palette=ABLATION_PALETTE,
@@ -494,6 +549,7 @@ def write_ablation_figures(ablation_results: pd.DataFrame, figures_dir: Path, dp
         ylabel="Injected Leakage Recall",
         title="Ablation: Leakage Feature Selection",
         path=figures_dir / "fig_ablation_leakage_recall.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
         order=ABLATION_ORDER,
         palette=ABLATION_PALETTE,
@@ -505,6 +561,7 @@ def write_ablation_figures(ablation_results: pd.DataFrame, figures_dir: Path, dp
         ylabel="Clean AUROC",
         title="Ablation: Clean AUROC",
         path=figures_dir / "fig_ablation_clean_auroc.png",
+        pdfs_dir=pdfs_dir,
         dpi=dpi,
         order=ABLATION_ORDER,
         palette=ABLATION_PALETTE,
@@ -518,6 +575,7 @@ def bar_metric(
     ylabel: str,
     title: str,
     path: Path,
+    pdfs_dir: Path,
     dpi: int,
     ylim: tuple[float, float] | None = None,
     order: list[str] | None = None,
@@ -546,11 +604,11 @@ def bar_metric(
     ax.tick_params(axis="y", labelsize=9)
     ax.legend(title="", loc="best", frameon=True, fontsize=8)
     fig.tight_layout()
-    fig.savefig(path, dpi=dpi, bbox_inches="tight")
+    save_figure(fig, path, pdfs_dir, dpi=dpi)
     plt.close(fig)
 
 
-def leaky_vs_clean_plot(data: pd.DataFrame, path: Path, dpi: int) -> None:
+def leaky_vs_clean_plot(data: pd.DataFrame, path: Path, pdfs_dir: Path, dpi: int) -> None:
     summary = (
         data.groupby(["dataset", "method"], observed=True)[["leaky_auroc", "clean_auroc"]]
         .mean()
@@ -572,11 +630,17 @@ def leaky_vs_clean_plot(data: pd.DataFrame, path: Path, dpi: int) -> None:
     fig.legend(handles, labels, title="", loc="lower center", ncol=len(METHOD_ORDER), frameon=False, fontsize=8)
     fig.suptitle("Leaky Test vs Clean Deployment AUROC", y=1.02, fontsize=11)
     fig.tight_layout(rect=(0, 0.12, 1, 1))
-    fig.savefig(path, dpi=dpi, bbox_inches="tight")
+    save_figure(fig, path, pdfs_dir, dpi=dpi)
     plt.close(fig)
 
 
-def render_table_png(frame: pd.DataFrame, path: Path, title: str, dpi: int) -> None:
+def render_table_png(
+    frame: pd.DataFrame,
+    path: Path,
+    pdfs_dir: Path,
+    title: str,
+    dpi: int,
+) -> None:
     max_rows = 18
     display = frame.head(max_rows).copy()
     rows, cols = display.shape
@@ -602,8 +666,14 @@ def render_table_png(frame: pd.DataFrame, path: Path, title: str, dpi: int) -> N
         else:
             cell.set_facecolor("#FFFFFF" if row % 2 else "#F7F7F7")
     fig.tight_layout()
-    fig.savefig(path, dpi=dpi, bbox_inches="tight")
+    save_figure(fig, path, pdfs_dir, dpi=dpi)
     plt.close(fig)
+
+
+def save_figure(fig: plt.Figure, png_path: Path, pdfs_dir: Path, dpi: int) -> None:
+    """Save one paper figure as both a high-resolution PNG and a vector PDF."""
+    fig.savefig(png_path, dpi=dpi, bbox_inches="tight")
+    fig.savefig(pdfs_dir / f"{png_path.stem}.pdf", format="pdf", bbox_inches="tight")
 
 
 def flatten_columns(columns: pd.Index) -> list[str]:

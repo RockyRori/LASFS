@@ -1,0 +1,22 @@
+You are selecting useful tabular features for a prediction task.
+
+Task description:
+{task_description}
+
+Feature name:
+{feature_name}
+
+Feature description:
+{feature_description}
+
+Evaluate only how semantically relevant this feature is for predicting the target.
+Do not perform any other feature-selection analysis.
+
+Return JSON only:
+{{
+  "semantic_relevance": 0.0,
+  "reason": "one short sentence"
+}}
+
+Scoring rule:
+- semantic_relevance: 0 means unrelated to the prediction task and 1 means directly useful for predicting the target.
